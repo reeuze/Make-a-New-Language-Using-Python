@@ -2,6 +2,7 @@ class Basic:
     def __init__(self):
         self.File = open("Code.txt", "r")
         self.Variabel = []
+        self.In_variabel = []
     def Check_line(self, scan):
         # print(scan)
         if '=' in scan:
@@ -10,18 +11,23 @@ class Basic:
             return 2
         elif 'print' in scan:
             return 3
-        elif ('if' in scan) or ('elif' in scan) or ('else' in scan):
+        elif ':' in scan:
             return 4
-        elif ('for' in scan):
+        elif ('if' in scan) or ('elif' in scan) or ('else' in scan):
             return 5
+        elif ('for' in scan):
+            return 6
         else:
-            print(99)
             return
     def Inisialitation(self, scan):
-        print('This is inisialisation !!')
+        split = scan.split('=')
+        self.Variabel.append(split[0])
+        # if split[1].isdigit():
+
     # def Input(self): 
     def Output(self, scan): 
         print('This is print')
+    # def Label(self, scan):
     # def Condition(self): 
     # def Looping(self): 
     # def Stack(self): 
