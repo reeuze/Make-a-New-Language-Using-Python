@@ -5,12 +5,10 @@ class Basic:
     def Check_line(self, scan):
         # print(scan)
         if '=' in scan:
-            print(1)
             return 1
         elif 'input' in scan:
             return 2
         elif 'print' in scan:
-            print(3)
             return 3
         elif ('if' in scan) or ('elif' in scan) or ('else' in scan):
             return 4
@@ -18,7 +16,7 @@ class Basic:
             return 5
         else:
             print(99)
-            return 99
+            return
     def Inisialitation(self, scan):
         print('This is inisialisation !!')
     # def Input(self): 
@@ -36,11 +34,11 @@ class Basic:
             self.temp = []
             # Check Function
             s = self.Check_line(self.scan)
-            Function = {
-                1: self.Inisialitation(self.scan),
-                3: self.Output(self.scan)
-            }
-            Function.get(s, lambda: self.Syntax_error)
+            if s == 1:
+                self.Inisialitation(self.scan)
+            elif s == 3:
+                self.Output(self.scan)
+            # ============ #
             self.scan = self.File.readline().strip()
         self.File.close()
 
