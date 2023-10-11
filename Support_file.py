@@ -1,3 +1,4 @@
+import re
 class Operation:
     def __init__(self):
         self.Variabel = []
@@ -14,12 +15,15 @@ class Operation:
         elif operator=='^':
             return float(var1)**float(var2)
     def Get_string(self, string):
-        open = string.find('(') + 1
-        close = string.find(')')
-        return string[open:close]
+        return re.findall('"([^"]*)"', string)
+    # def Get_string(self, string, begin, end):
+    #     open = string.find(begin) + 1
+    #     close = string.find(end)
+    #     return string[open:close]
     def Check_var(self, variable):
         for i in range(len(self.Variabel)):
             if variable == self.Variabel[i]:
+                print(i)
                 return i
     def Is_Operator(self, character):
         operators = "+-*/^"

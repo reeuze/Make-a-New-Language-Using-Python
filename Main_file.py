@@ -1,5 +1,4 @@
 from Support_file import Operation
-
 class Main:
     def __init__(self):
         self.File = open("Code.txt", "r")
@@ -22,6 +21,7 @@ class Main:
         else:
             return
     def Inisialitation(self, scan):
+        print("inisialitation detected !")
         split = scan.split('=')
         x.Variabel.append(split[0])
         if split[1].isdigit():
@@ -29,11 +29,18 @@ class Main:
         else:
             x.In_variabel.append(None)
     # def Input(self): 
-    def Output(self, scan): 
-        scan = x.Get_string(scan)
+    def Output(self, scan):
+        print("print detected !") 
+        scan = x.Get_string(scan,)
         if '"' in scan:
+            print("detect string")
+            scan = x.Get_string(scan,)
+            print(scan)
+        elif "\'" in scan:
+            scan = x.Get_string(scan,)
             print(scan)
         else:
+            print("detect var")
             print(x.In_variabel[x.Check_var(scan)])
     # def Label(self, scan):
     # def Condition(self): 
@@ -54,7 +61,7 @@ class Main:
                 self.Output(self.scan)
             # ============ #
             self.scan = self.File.readline().strip()
-            # self.Print()
+            self.Print()
         self.File.close()
 
 a = Main()
