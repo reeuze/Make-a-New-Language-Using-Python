@@ -1,5 +1,6 @@
-from Math import Operation
-class Basic:
+from Support_file import Operation
+
+class Main:
     def __init__(self):
         self.File = open("Code.txt", "r")
     def Print(self):
@@ -56,6 +57,6 @@ class Basic:
             # self.Print()
         self.File.close()
 
-a = Basic()
+a = Main()
 x = Operation()
 a.Execution()
