@@ -1,10 +1,11 @@
+from Math import Operation
 class Basic:
     def __init__(self):
         self.File = open("Code.txt", "r")
-        self.Variabel = []
-        self.In_variabel = []
+    def Print(self):
+        print("variabel : ", x.Variabel)
+        print("value variabel : ", x.In_variabel)
     def Check_line(self, scan):
-        # print(scan)
         if '=' in scan:
             return 1
         elif 'input' in scan:
@@ -21,12 +22,18 @@ class Basic:
             return
     def Inisialitation(self, scan):
         split = scan.split('=')
-        self.Variabel.append(split[0])
-        # if split[1].isdigit():
-
+        x.Variabel.append(split[0])
+        if split[1].isdigit():
+            x.In_variabel.append(split[1])
+        else:
+            x.In_variabel.append(None)
     # def Input(self): 
     def Output(self, scan): 
-        print('This is print')
+        scan = x.Get_string(scan)
+        if '"' in scan:
+            print(scan)
+        else:
+            print(x.In_variabel[x.Check_var(scan)])
     # def Label(self, scan):
     # def Condition(self): 
     # def Looping(self): 
@@ -46,7 +53,9 @@ class Basic:
                 self.Output(self.scan)
             # ============ #
             self.scan = self.File.readline().strip()
+            # self.Print()
         self.File.close()
 
 a = Basic()
+x = Operation()
 a.Execution()
