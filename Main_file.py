@@ -31,13 +31,14 @@ class Main:
     # def Input(self): 
     def Output(self, scan):
         print("print detected !") 
-        scan = x.Get_string(scan,)
+        scan = x.Get_string(scan)
         if '"' in scan:
             print("detect string")
-            scan = x.Get_string(scan,)
+            scan = x.Get_string(scan)
             print(scan)
         elif "\'" in scan:
-            scan = x.Get_string(scan,)
+            print("detect string")
+            scan = x.Get_string(scan)
             print(scan)
         else:
             print("detect var")

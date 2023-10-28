@@ -11,3 +11,4 @@ Apa saja yang perlu bisa dilakukan
 5. Perulangan
 6. array
 7. Fungsi
+8. Label
