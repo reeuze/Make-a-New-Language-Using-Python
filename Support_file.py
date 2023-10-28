@@ -3,17 +3,6 @@ class Operation:
     def __init__(self):
         self.Variabel = []
         self.In_variabel = []
-    def Operation(self, var1, var2, operator):
-        if operator=='+':
-            return float(var1)+float(var2)
-        elif operator=='-':
-            return float(var1)-float(var2)
-        elif operator=='*':
-            return float(var1)*float(var2)
-        elif operator=='/':
-            return float(var1)/float(var2)
-        elif operator=='^':
-            return float(var1)**float(var2)
     def Get_string(self, string):
         hasil = re.findall(r"\((.*?)\)", string)
         print(hasil)

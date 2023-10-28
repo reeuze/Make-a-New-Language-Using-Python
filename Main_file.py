@@ -28,7 +28,8 @@ class Main:
             x.In_variabel.append(split[1])
         else:
             x.In_variabel.append(None)
-    # def Input(self): 
+    def Input(self):
+        print("A")
     def Output(self, scan):
         print("print detected !") 
         scan = x.Get_string(scan)
