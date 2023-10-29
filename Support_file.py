@@ -7,17 +7,14 @@ class Operation:
         self.variable = []
         self.in_variable = []
     def Inisialitation(self, scan):
-        print("inisialitation detected !")
         split = scan.split('=')
-        self.variable.append(split[0])
-        if split[1].isdigit():
-            self.in_variable.append(split[1])
-        else:
-            self.in_variable.append(None)
+        if inisial.Refill(split[0], split[1], self.variable, self.in_variable) is True:
+            return
+        elif inisial.Input(split[0], split[1], self.variable, self.in_variable) is True:
+            return
     def Input(self):
         print("A")
     def Output(self, scan):
-        print("print detected !") 
         scan = output.Get_output(scan)
         output.Main(scan, self.variable, self.in_variable)
     # def Label(self, scan):

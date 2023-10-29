@@ -3,8 +3,8 @@ class Main:
     def __init__(self):
         self.File = open("Code.txt", "r")
     def Print(self):
-        print("variabel : ", x.Variabel)
-        print("value variabel : ", x.In_variabel)
+        print("variabel : ", x.variable)
+        print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
         if '=' in scan:         # Inisialitation
             return 1
@@ -32,7 +32,7 @@ class Main:
                 x.Output(self.scan)
             # ============ #
             self.scan = self.File.readline().strip()
-            self.Print()
+            # self.Print()
         self.File.close()
 
 a = Main()
