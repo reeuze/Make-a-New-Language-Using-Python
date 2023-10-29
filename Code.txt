@@ -1,5 +1,5 @@
 a=1
 b=2
 test=20
-print(test, a, b)
+print(a,' ',b,' ',test)
 print("Astaghfirullah")

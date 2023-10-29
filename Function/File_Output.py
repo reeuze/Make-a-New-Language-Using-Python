@@ -4,14 +4,12 @@ class Output:
         self.string = []
     def Main(self, str, var=[], in_var=[]):
         self.string = str.split(',')
-        print(self.string)
         for i in range(len(self.string)):
             if '"' in self.string[i]:
                 self.Direct('"', self.string[i])
             elif "\'" in self.string[i]:
                 self.Direct("\'", self.string[i])
             else:
-                print("var : ", self.string[i])
                 self.Variable(self.string[i], var, in_var)
         print(self.output)
         self.output = ""
@@ -19,9 +17,9 @@ class Output:
     # Output type
     def Direct(self, type, str):
         self.output += self.Get_string(type, str)
-    def Variable(self, str, var=[], in_var=[]):
+    def Variable(self, string, var=[], in_var=[]):
         for i in range(len(var)):
-            if str == var[i]:
+            if string==var[i]:
                 self.output += in_var[i]
                 break
     # Helper
