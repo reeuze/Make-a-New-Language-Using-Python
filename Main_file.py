@@ -6,51 +6,20 @@ class Main:
         print("variabel : ", x.Variabel)
         print("value variabel : ", x.In_variabel)
     def Check_line(self, scan):
-        if '=' in scan:
+        if '=' in scan:         # Inisialitation
             return 1
-        elif 'input' in scan:
+        elif 'input' in scan:   # Input
             return 2
-        elif 'print' in scan:
+        elif 'print' in scan:   # Output
             return 3
-        elif ':' in scan:
+        elif ':' in scan:       # Label
             return 4
-        elif ('if' in scan) or ('elif' in scan) or ('else' in scan):
+        elif ('if' in scan) or ('elif' in scan) or ('else' in scan):    # Condition
             return 5
-        elif ('for' in scan):
+        elif ('for' in scan):   # Looping
             return 6
-        else:
+        else:                   # Syntax Error
             return
-    def Inisialitation(self, scan):
-        print("inisialitation detected !")
-        split = scan.split('=')
-        x.Variabel.append(split[0])
-        if split[1].isdigit():
-            x.In_variabel.append(split[1])
-        else:
-            x.In_variabel.append(None)
-    def Input(self):
-        print("A")
-    def Output(self, scan):
-        print("print detected !") 
-        scan = x.Get_string(scan)
-        if '"' in scan:
-            print("detect string")
-            scan = x.Get_string(scan)
-            print(scan)
-        elif "\'" in scan:
-            print("detect string")
-            scan = x.Get_string(scan)
-            print(scan)
-        else:
-            print("detect var")
-            print(x.In_variabel[x.Check_var(scan)])
-    # def Label(self, scan):
-    # def Condition(self): 
-    # def Looping(self): 
-    # def Stack(self): 
-    # def Function(self): 
-    def Syntax_error(self):
-        print('syntax error!!')
     def Execution(self):
         self.scan = self.File.readline().strip()
         while self.scan:
@@ -58,9 +27,9 @@ class Main:
             # Check Function
             s = self.Check_line(self.scan)
             if s == 1:
-                self.Inisialitation(self.scan)
+                x.Inisialitation(self.scan)
             elif s == 3:
-                self.Output(self.scan)
+                x.Output(self.scan)
             # ============ #
             self.scan = self.File.readline().strip()
             self.Print()

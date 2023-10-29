@@ -2,5 +2,4 @@ a=1
 b=2
 test=20
 print(a)
-c=a+b
 print("Astaghfirullah")
