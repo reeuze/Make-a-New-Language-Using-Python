@@ -3,7 +3,6 @@ class Main:
     def __init__(self):
         self.Name_file = "Code.txt"
         self.lines = []
-        self.File = open(self.Name_file, "r")
     def Print(self):
         print("variabel : ", x.variable)
         print("value variabel : ", x.in_variable)
@@ -25,41 +24,29 @@ class Main:
     def Execution(self):
         with open(self.Name_file, 'r') as file:
             self.lines = file.readlines()
-            line = 1
-            while self.lines:
+            for i in range(len(self.lines)):
+                self.lines[i] = self.lines[i].replace('\n', '')
+            line = 0
+            while 0 <= line < len(self.lines):
                 s = self.Check_line(self.lines[line])
                 # ============ #
                 if s == 1:
+                    # print("detect inisial")
                     x.Inisialitation(self.lines[line])
                 elif s == 2:
+                    # print("detect input")
                     x.Input(self.lines[line])
                 elif s == 3:
+                    # print("detect output")
                     x.Output(self.lines[line])
                 elif s == 4:
+                    # print("detect label")
                     set_line = x.Label(self.lines[line], self.lines, line)
                     if set_line != -1:
                         line = set_line
                 # ============ #
+                # self.Print()
                 line += 1
-    # def Execution(self):
-    #     self.scan = self.File.readline().strip()
-    #     line = 0
-    #     while self.scan:
-    #         s = self.Check_line(self.scan)
-    #         # ============ #
-    #         if s == 1:
-    #             x.Inisialitation(self.scan)
-    #         elif s == 2:
-    #             x.Input(self.scan)
-    #         elif s == 3:
-    #             x.Output(self.scan)
-    #         elif s == 4:
-    #             x.Label(self.scan, self.Name_file, line)
-    #         # ============ #
-    #         self.scan = self.File.readline().strip()
-    #         # self.Print()
-    #         line += 1
-    #     self.File.close()
 
 a = Main()
 x = Operation()

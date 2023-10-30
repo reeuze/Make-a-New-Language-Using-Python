@@ -3,5 +3,7 @@ b=2
 test=20
 goto Label
 print(a,' ',b,' ',test)
+print('ngulang teros')
+print(a,' ',b)
 Label:
 print("Astaghfirullah")
