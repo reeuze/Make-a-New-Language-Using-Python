@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-29T09:07:59.612Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="QRXx7kRl9jMwJJXYLowp" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-29T19:03:20.382Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="V9ueT6be44jqJJWbmnlo" version="22.0.8" type="device">
   <diagram name="Halaman-1" id="1nc28jSzTPdm_pfPCFTR">
-    <mxGraphModel dx="836" dy="528" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="2000" math="0" shadow="0">
+    <mxGraphModel dx="934" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,38 +8,33 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-1" value="Start Program" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="52.5" width="130" height="55" as="geometry" />
+          <mxGeometry x="255" y="52.5" width="130" height="55" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZSAQHpN-eL0URogZfKka-4" target="ZSAQHpN-eL0URogZfKka-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-4" value="Input code" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="50" width="120" height="60" as="geometry" />
+          <mxGeometry x="75" y="50" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-11" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="720.9999999999998" y="80" as="sourcePoint" />
-            <mxPoint x="810.9999999999998" y="80" as="targetPoint" />
+            <mxPoint x="555.9999999999998" y="80" as="sourcePoint" />
+            <mxPoint x="645.9999999999998" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZSAQHpN-eL0URogZfKka-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZSAQHpN-eL0URogZfKka-6" target="ZSAQHpN-eL0URogZfKka-12">
+        <mxCell id="ZSAQHpN-eL0URogZfKka-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZSAQHpN-eL0URogZfKka-6" target="ZSAQHpN-eL0URogZfKka-12">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="680" y="130" />
+              <mxPoint x="515" y="130" />
               <mxPoint x="60" y="130" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZSAQHpN-eL0URogZfKka-14" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ZSAQHpN-eL0URogZfKka-13">
-          <mxGeometry x="-0.142" y="-1" relative="1" as="geometry">
-            <mxPoint x="-1" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-6" value="End of file?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="40" width="80" height="80" as="geometry" />
+          <mxGeometry x="475" y="40" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-10" value="Stop Program" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="810" y="51.25" width="120" height="57.5" as="geometry" />
+          <mxGeometry x="645" y="51.25" width="120" height="57.5" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-12" value="Type of&lt;br&gt;program?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="20" y="160" width="80" height="80" as="geometry" />
@@ -57,16 +52,16 @@
           <mxGeometry x="125" y="790" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-23" value="Condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="920" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1180" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-24" value="Looping" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1030" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1290" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-25" value="Array" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1150" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1410" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-26" value="Function" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1288" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1548" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-27" value="Type of&lt;br&gt;inisial?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="270" width="80" height="80" as="geometry" />
@@ -115,6 +110,39 @@
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-43" value="Set inisialitation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-45" value="Which one?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="900" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-46" value="Detects one of the label components" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-47" value="Label Name" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="790" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-48" value="goto statement" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="900" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-56" value="Set label name in stack label" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-57" value="Label&lt;br&gt;name already&lt;br&gt;exists" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="895" width="95" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-58" value="Label&lt;br&gt;name&lt;br&gt;not-exists" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1000" width="95" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-60" value="start reading the program back to the label name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="910" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-61" value="look for the label name to the next line" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1015" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-62" value="Found?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1005" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-63" value="Nothing happened&lt;br&gt;(?)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="1120" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
