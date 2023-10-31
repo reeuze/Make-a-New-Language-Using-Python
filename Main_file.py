@@ -13,15 +13,15 @@ class Main:
             return 2
         elif 'cetak' in scan:   # Output
             return 3
-        elif (':' in scan) or ('ke' in scan):     # Label
+        elif (':' in scan) or ('ke' in scan):   # Label
             return 4
         elif ('if' in scan) or ('elif' in scan) or ('else' in scan):    # Condition
             return 5
         elif ('for' in scan):   # Looping
             return 6
-        elif ('=' and '[' and ']') in scan:
+        elif ('=' and '[' and ']') in scan:     # List
             return 7
-        elif 'def' in scan:
+        elif 'def' in scan:     # Function
             return 8
         else:                   # Syntax Error
             return

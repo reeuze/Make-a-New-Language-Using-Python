@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-29T19:03:20.382Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="V9ueT6be44jqJJWbmnlo" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-31T05:18:57.031Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="U9S1GhksaMiVGslVsNor" version="22.0.8" type="device">
   <diagram name="Halaman-1" id="1nc28jSzTPdm_pfPCFTR">
-    <mxGraphModel dx="934" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
+    <mxGraphModel dx="588" dy="372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -55,13 +55,13 @@
           <mxGeometry x="125" y="1180" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-24" value="Looping" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1290" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1590" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-25" value="Array" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1410" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1710" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-26" value="Function" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="125" y="1548" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="1848" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-27" value="Type of&lt;br&gt;inisial?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="270" width="80" height="80" as="geometry" />
@@ -143,6 +143,33 @@
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-63" value="Nothing happened&lt;br&gt;(?)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="810" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-64" value="Type of&lt;br&gt;Condition?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-65" value="If condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-66" value="If else&lt;br&gt;condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1290" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-67" value="if else if&lt;br&gt;condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1400" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-68" value="nested if&lt;br&gt;condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1510" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-69" value="number comparison condition" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="1190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-70" value="logical condition" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-71" value="Conditions in the string" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZSAQHpN-eL0URogZfKka-72" value="Conditions in the List" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="1520" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,6 +1,7 @@
 class Label:
     def __init__(self):
         self.Label = {}
+    # Label Type
     def Label_name(self, label, line):
         if 'ke' in label:
             return False
@@ -15,10 +16,10 @@ class Label:
         else:
             label = label+':'
             i = line
-            while lines:
-                i += 1
+            while i < len(lines):
                 if label == lines[i]:
                     return i
+                i += 1
             return -1
 
     # Helper
