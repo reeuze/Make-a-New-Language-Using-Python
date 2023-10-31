@@ -11,14 +11,18 @@ class Main:
             return 1
         elif 'input' in scan:   # Input
             return 2
-        elif 'print' in scan:   # Output
+        elif 'cetak' in scan:   # Output
             return 3
-        elif (':' in scan) or ('goto' in scan):     # Label
+        elif (':' in scan) or ('ke' in scan):     # Label
             return 4
         elif ('if' in scan) or ('elif' in scan) or ('else' in scan):    # Condition
             return 5
         elif ('for' in scan):   # Looping
             return 6
+        elif ('=' and '[' and ']') in scan:
+            return 7
+        elif 'def' in scan:
+            return 8
         else:                   # Syntax Error
             return
     def Execution(self):

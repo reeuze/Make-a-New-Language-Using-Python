@@ -2,7 +2,7 @@ class Label:
     def __init__(self):
         self.Label = {}
     def Label_name(self, label, line):
-        if 'goto' in label:
+        if 'ke' in label:
             return False
         label = label.replace(':', '')
         self.Label.update({label:line})
