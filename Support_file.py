@@ -1,4 +1,5 @@
 from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
+from Function import File_Operation
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
@@ -26,8 +27,8 @@ class Operation:
             return -1
         else:
             return label.Goto_statement(scan, lines, line)
-    # def Condition(self): 
-    
+    def Condition(self):
+        print('B')
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

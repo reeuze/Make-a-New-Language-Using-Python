@@ -48,6 +48,9 @@ class Main:
                     set_line = x.Label(self.lines[line], self.lines, line)
                     if set_line != -1:
                         line = set_line
+                elif s == 5:
+                    # print("detect condition")
+                    x.Condition()
                 # ============ #
                 # self.Print()
                 line += 1
