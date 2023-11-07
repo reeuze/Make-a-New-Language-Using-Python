@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T07:53:22.987Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="udWV5o9e_-q9c_anmGwv" version="22.0.8" type="device">
+  <diagram name="Halaman-1" id="PPnK74VSLLcPiPMxKrCw">
+    <mxGraphModel dx="588" dy="372" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="3000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="suF6BDmtJbbMYVme7NTf-1" value="Input Operation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-2" value="Add brackets at the beginning and end of the operation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-3" value="start operation function" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="suF6BDmtJbbMYVme7NTf-4" target="suF6BDmtJbbMYVme7NTf-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-4" value="Read operation each&lt;br&gt;2 variable and 1 operator" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="suF6BDmtJbbMYVme7NTf-5" target="suF6BDmtJbbMYVme7NTf-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="suF6BDmtJbbMYVme7NTf-5" target="suF6BDmtJbbMYVme7NTf-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-5" value="If close&lt;br&gt;bracket?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-7" value="Type of Operation?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-9" value="Integer" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-10" value="String" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="550" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-11" value="Logic" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="670" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-12" value="Boolean" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="790" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-13" value="Subtraction" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="220" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-14" value="Addition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-15" value="Multiplication" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="330" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-16" value="Distribution" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="440" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-17" value="Do the Addition" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-18" value="Do the Substraction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-19" value="Do the Multiplication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="suF6BDmtJbbMYVme7NTf-20" value="Do the Distribution" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
