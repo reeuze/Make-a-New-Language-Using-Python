@@ -1,5 +1,5 @@
 from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
-from Function import File_Operation
+from Function.Operation import File_Operation
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()

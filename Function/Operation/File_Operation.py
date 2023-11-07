@@ -1,11 +1,26 @@
+import re
 class Operation:
     def __init__(self):
         self.Input = []
         # self.Character = []
         # self.Postfix = []
+        self.Arithmetic = r'[\+\-\*\/\%\*\*]'
+        self.Comparison = r'==|!=|>=?|<=?'
+        self.Logic = r'and|or|not'
+        self.Task = r'[\+\-\*\*\/%]?='
+        # self.Bitwise = r'&|\||\^|~|<<|>>'
+        # self.Member = r'in|not in'
+        # self.Identity = r'is|is not'
     # Helper
     def Convert(self, input):
         self.Input.append('(')
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
+        self.Input = re.findall(self.Arithmetic, input)
         for char in input:
             self.Input.append(char)
         self.Input.append(')')
@@ -13,18 +28,27 @@ class Operation:
         operators = "+-*/^"
         if character in operators:
             return True
+    def Check_type(self, operator=[]):
+        Arithmetic = r'[\+\-\*\/\%\*\*]'
+        Comparison = r'==|!=|>=?|<=?'
+        Logic = r'and|or|not'
+        Bitwise = r'&|\||\^|~|<<|>>'
+        Task = r'[\+\-\*\*\/%]?='
+        Member = r'in|not in'
+        Identity = r'is|is not'
+
     # Type Operation
     def Operation(self, var1, var2, operator):
         if operator=='+':
-            return float(var1)+float(var2)
+            return var1+var2
         elif operator=='-':
-            return float(var1)-float(var2)
+            return var1-var2
         elif operator=='*':
-            return float(var1)*float(var2)
+            return var1*var2
         elif operator=='/':
-            return float(var1)/float(var2)
+            return var1/var2
         elif operator=='^':
-            return float(var1)**float(var2)
+            return var1**var2
     # def Fix_character(self, character=[], postfix=[]):
     #     i = len(character) - 1
     #     while i >= 0:
@@ -104,9 +128,10 @@ class Operation:
                 return
         return ''.join(self.Input)
 
-# input = "1 is one"
+input = "1 is one"
 # input2 = "1+(2/3-(4*5^6)+7)*8"
-# a = Operation()
-# a.Convert(input)
+a = Operation()
+a.Convert(input)
+print(a.Input)
 # hasil = a.Algorithm(a.Input)
 # print("\nHasilnya : ", hasil)
