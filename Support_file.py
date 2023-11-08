@@ -17,6 +17,8 @@ class Operation:
             return
         elif inisial.Input(split[0], split[1], self.variable, self.in_variable) is True:
             return
+        elif inisial.Operation(split[0], split[1], self.variable, self.in_variable) is True:
+            return
     def Input(self):
         print("A")
     def Output(self, scan):

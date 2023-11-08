@@ -1,9 +1,13 @@
 a=1
 b=2
 test=teks
+k=0
 ke Label
+k=b-a
 Label:
-cetak(a,' ',b,' ',test)
-a=30
-cetak(a,' ',b)
-cetak("Tulsan saja")
+c=a+b
+cetak('nilai a: ',a)
+cetak('nilai b: ',b)
+cetak('nilai test: ',test)
+cetak('nilai k: ',k)
+cetak('nilai c: ',c)

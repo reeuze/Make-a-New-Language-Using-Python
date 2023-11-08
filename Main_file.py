@@ -35,7 +35,7 @@ class Main:
                 s = self.Check_line(self.lines[line])
                 # ============ #
                 if s == 1:
-                    # print("detect inisial")
+                    # print("detect inisialitation")
                     x.Inisialitation(self.lines[line])
                 elif s == 2:
                     # print("detect input")
