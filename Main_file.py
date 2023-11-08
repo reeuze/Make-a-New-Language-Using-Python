@@ -9,13 +9,13 @@ class Main:
     def Check_line(self, scan):
         if '=' in scan:         # Inisialitation
             return 1
-        elif 'input' in scan:   # Input
+        elif 'masukkan' in scan:   # Input
             return 2
         elif 'cetak' in scan:   # Output
             return 3
         elif (':' in scan) or ('ke' in scan):   # Label
             return 4
-        elif ('if' in scan) or ('elif' in scan) or ('else' in scan):    # Condition
+        elif (('jika' in scan) or ('jika tidak' in scan) or ('lainnya' in scan)) and (':' in scan):# Condition
             return 5
         elif ('for' in scan):   # Looping
             return 6
@@ -50,7 +50,7 @@ class Main:
                         line = set_line
                 elif s == 5:
                     # print("detect condition")
-                    x.Condition()
+                    x.Condition(self.lines[line], self.lines, line)
                 # ============ #
                 # self.Print()
                 line += 1

@@ -1,9 +1,9 @@
 from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
-from Function.Operation import File_Operation
+from Function.Operation_Condition import Main
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
-# input = File_input.Input()
+input = File_Input.Input()
 label = File_Label.Label()
 condition = File_Condition.Condition()
 class Operation:
@@ -19,8 +19,9 @@ class Operation:
             return
         elif inisial.Operation(split[0], split[1], self.variable, self.in_variable) is True:
             return
-    def Input(self):
-        print("A")
+    def Input(self, scan):
+        scan = input.Get_input(scan)
+        
     def Output(self, scan):
         scan = output.Get_output(scan)
         output.Main(scan, self.variable, self.in_variable)
@@ -29,8 +30,11 @@ class Operation:
             return -1
         else:
             return label.Goto_statement(scan, lines, line)
-    def Condition(self):
-        print('B')
+    def Condition(self, scan, lines, line):
+        scan = scan.split('')
+        input = scan[1]
+        input = input.replace(':', '')
+        condition.Main(input)
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

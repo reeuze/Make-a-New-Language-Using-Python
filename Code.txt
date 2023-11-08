@@ -5,9 +5,14 @@ k=0
 ke Label
 k=b-a
 Label:
-c=a+b
+c=(a+b)*(a-b)
 cetak('nilai a: ',a)
 cetak('nilai b: ',b)
 cetak('nilai test: ',test)
 cetak('nilai k: ',k)
 cetak('nilai c: ',c)
+masukkan('masukkan variabel :',c)
+jika (a>b):
+    cetak('benar')
+lainnya:
+    cetak('salah')

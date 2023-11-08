@@ -1,14 +1,13 @@
 import re
 class Operation:
-    def __init__(self):
+    def __init__(self, condition):
         self.Input = []
-        self.Operator = r'([\+\-\*\/\%\*\*]|==|!=|>=?|<=?|and|or|not|[\+\-\*\*\/%]?=|\w+|\d+|\(|\))'
-        self.Arithmetic = r'[\+\-\*\/\%\*\*]'
+        self.Operator = r'==|!=|>=?|<=?|and|or|not|in|not in|\w+|\d+|\(|\)'
         self.Comparison = r'==|!=|>=?|<=?'
         self.Logic = r'and|or|not'
-        self.Task = r'[\+\-\*\*\/%]?='
+        self.Member = r'in|not in'
+        # self.Task = r'[\+\-\*\*\/%]?='
         # self.Bitwise = r'&|\||\^|~|<<|>>'
-        # self.Member = r'in|not in'
         # self.Identity = r'is|is not'
     # Helper
     def Convert(self, input):
@@ -19,7 +18,7 @@ class Operation:
                 self.Input[i] = int(char)
     # def Take_list(self, input=[], i):
     #     for j in range(len(input)):
-
+            
     # def Check_type(self, input=[]):
         
     def Algorithm(self, input=[], index=0):
@@ -31,11 +30,5 @@ class Operation:
             elif input[i]==')':
                 # list = 
                 # check logic
-
                 return
         return ''.join(self.Input)
-
-# input = "(A==B) and (A>=12)"
-# a = Operation()
-# a.Convert(input)
-# print(a.Input)
