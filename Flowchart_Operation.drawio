@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T06:55:43.215Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="bbEVreGk0hgG56GL7KWG" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-11-08T07:37:34.266Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="-lAnrShhpAfM9E9uZkHv" version="22.0.8" type="device">
   <diagram name="Halaman-1" id="PPnK74VSLLcPiPMxKrCw">
-    <mxGraphModel dx="1764" dy="1116" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="3000" math="0" shadow="0">
+    <mxGraphModel dx="1444" dy="913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -49,19 +49,19 @@
           <mxGeometry x="520" y="110" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-10" value="Logic" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="510" y="880" width="80" height="80" as="geometry" />
+          <mxGeometry x="510" y="920" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-12" value="Member" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="510" y="1240" width="80" height="80" as="geometry" />
+          <mxGeometry x="510" y="1280" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-13" value="More than&lt;br&gt;or equal" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="680" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-14" value="Equal" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="210" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="200" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-15" value="Lest than&lt;br&gt;or equal" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="640" y="790" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="800" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="suF6BDmtJbbMYVme7NTf-16" value="Not Equal" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="320" width="80" height="80" as="geometry" />
@@ -70,19 +70,19 @@
           <mxGeometry x="760" y="120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-16" value="and" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="880" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="920" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-17" value="or" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="1000" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="1040" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-18" value="not" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="1120" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="1160" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-25" value="in" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="1240" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="1280" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-26" value="not in" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="1360" width="80" height="80" as="geometry" />
+          <mxGeometry x="640" y="1400" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="BhrdFEQA1PtN3BTJSYAs-27" value="More Than" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="440" width="80" height="80" as="geometry" />

@@ -21,7 +21,9 @@ class Operation:
             return
     def Input(self, scan):
         scan = input.Get_input(scan)
-        
+        scan = scan.split(',')
+        # output.Main(scan[0], self.variable, self.in_variable)
+        input.Main(scan, self.variable, self.in_variable)
     def Output(self, scan):
         scan = output.Get_output(scan)
         output.Main(scan, self.variable, self.in_variable)

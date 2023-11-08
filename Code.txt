@@ -12,6 +12,7 @@ cetak('nilai test: ',test)
 cetak('nilai k: ',k)
 cetak('nilai c: ',c)
 masukkan('masukkan variabel :',c)
+cetak('nilai c yang baru : ',c)
 jika (a>b):
     cetak('benar')
 lainnya:

@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-08T07:09:38.634Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="ouHRLfqX3fDNNGwNUDp9" version="22.0.8" type="device">
+<mxfile host="app.diagrams.net" modified="2023-11-08T17:27:17.530Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="YjXO3HO7F95YFaiZ_if-" version="22.0.8" type="device">
   <diagram name="Halaman-1" id="1nc28jSzTPdm_pfPCFTR">
-    <mxGraphModel dx="756" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
+    <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -150,10 +150,10 @@
           <mxGeometry x="510" y="600" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-42" value="Input until enter" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
-          <mxGeometry x="570" y="690" width="120" height="60" as="geometry" />
+          <mxGeometry x="410" y="690" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-43" value="Set inisialitation" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="730" y="690" width="120" height="60" as="geometry" />
+          <mxGeometry x="560" y="690" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-45" value="Which one?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="260" y="1090" width="80" height="80" as="geometry" />
@@ -239,11 +239,8 @@
         <mxCell id="ZSAQHpN-eL0URogZfKka-104" value="Check the condition True or Not" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="960" y="1600" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Cfcv_IyC0T6oTeBfnCyv-1" value="Show words" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="235" y="690" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Cfcv_IyC0T6oTeBfnCyv-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="235" y="790" width="120" height="60" as="geometry" />
+        <mxCell id="Cfcv_IyC0T6oTeBfnCyv-1" value="Show words" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="690" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
