@@ -1,54 +1,34 @@
+import re
 class Condition:
     # Main
     def __init__(self):
         self.Input = []
-    def Main(self, scan):
-        s = self.Check_type(scan)
-        if s == 1/2/3/4/5/6:
-            self.Comparison(scan)
-        if s == 11/12/13:
-            self.Logic()
-        if s == 21/22:
-            self.Member()
-    # Condition Type
-    # def If(self):
-    #     print("A")
-    # def If_else(self):
-    #     print("B")
-    # def If_else_if(self):
-    #     print('C')
-    # def Nested_if(self):
-    #     print('D')
-    def Check_type(self, scan):
-        # Comparison
-        if '==' in scan:
-            return 1
-        elif '!=' in scan:
-            return 2
-        elif '>' in scan:
-            return 3
-        elif '<' in scan:
-            return 4
-        elif '>=' in scan:
-            return 5
-        elif '<=' in scan:
-            return 6
-        # Member
-        elif 'in' in scan:
-            return 21
-        elif 'not in' in scan:
-            return 22
-        # Logic
-        elif 'and' in scan:
-            return 11
-        elif 'or' in scan:
-            return 12
-        elif 'not' in scan:
-            return 13
+    def Main(self, Input=[], index=0):
+        Input = self.Input
+        for i in range(len(Input)):
+            if len(Input) == 1:
+                break
+            elif Input[i] == '(':
+                self.Main(Input, i+1)
+            elif Input[i] == ')':
+                self.Calculation(Input, index)
+                return
+    # Sub Main
+    def Calculation(sslf, Input=[], index=0):
+        
     # Helper
-    def Comparison(self, input):
-        print('E')
-    def Logic(self):
-        print('F')
-    def Member(self):
-        print('H')
+    def Convert(self, scan):
+        scan = '(' + scan + ')'
+        key_word = r'==|!=|>=|<=|<|>|in|not in|and|or|not|\w+|\d+|\(|\)'
+        self.Input = re.findall(key_word, scan)
+    def Priority(self, operator):
+        if '==' in operator:
+            return 1
+        elif '!=' in operator:
+            return 2
+        if ('>' or '<' or '>=' or '<=') in operator:
+            return 3
+        elif ('in' or 'not in') in operator:
+            return 4
+        elif ('and' or 'or' or 'not') in operator:
+            return 5

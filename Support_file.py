@@ -33,10 +33,11 @@ class Operation:
         else:
             return label.Goto_statement(scan, lines, line)
     def Condition(self, scan, lines, line):
-        scan = scan.split('')
+        scan = scan.split(' ')
         input = scan[1]
         input = input.replace(':', '')
-        condition.Main(input)
+        condition.Convert(input)
+        condition.Main()
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

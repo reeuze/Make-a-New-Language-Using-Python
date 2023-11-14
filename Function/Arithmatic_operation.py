@@ -27,7 +27,7 @@ class Class_Operation:
             return float(var1)/float(var2)
         elif operator=='^':
             return float(var1)**float(var2)
-    def calculation(self, input=[], index=0):
+    def Calculation(self, input=[], index=0):
         self.Char = []
         self.Num = []
         while input:
@@ -70,6 +70,6 @@ class Class_Operation:
             elif input[i]=='(':
                 self.Main_Algorithm(input, i+1)
             elif input[i]==')':
-                self.calculation(input, index)
+                self.Calculation(input, index)
                 return
         return ''.join(self.Input)
