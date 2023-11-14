@@ -30,6 +30,7 @@ class Main:
             self.lines = file.readlines()
             for i in range(len(self.lines)):
                 self.lines[i] = self.lines[i].replace('\n', '')
+            print(self.lines)
             line = 0
             while 0 <= line < len(self.lines):
                 s = self.Check_line(self.lines[line])
@@ -50,7 +51,9 @@ class Main:
                         line = set_line
                 elif s == 5:
                     # print("detect condition")
-                    x.Condition(self.lines[line], self.lines, line)
+                    set_line = x.Condition(self.lines[line], self.lines, line)
+                    if set_line != -1:
+                        line = set_line
                 # ============ #
                 # self.Print()
                 line += 1

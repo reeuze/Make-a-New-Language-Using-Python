@@ -37,7 +37,10 @@ class Operation:
         input = scan[1]
         input = input.replace(':', '')
         condition.Convert(input)
-        condition.Main()
+        if condition.Main() is True:
+            print('True')
+        else: 
+            print('False')
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

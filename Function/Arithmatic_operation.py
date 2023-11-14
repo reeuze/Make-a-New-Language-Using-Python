@@ -9,8 +9,6 @@ class Class_Operation:
         for char in input:
             self.Input.append(char)
         self.Input.append(')')
-        # Token = r'[\+\-\*\/\%\*\*\^]|\w+|\d+|\(|\)'
-        # self.Input = re.findall(Token, input)
     def Is_Operator(self, character):
         operators = "+-*/^"
         if character in operators:
@@ -53,14 +51,12 @@ class Class_Operation:
                     n = 3
                     i = j
                 best = n
-            hasil = self.Operation(self.Num[i], self.Num[i+1], self.Char.pop(i))
+            hasil = self.Operation(self.Num.pop(i), self.Num.pop(i), self.Char.pop(i))
             self.Num.insert(i, str(hasil))
-            self.Num.pop(i+1)
-            self.Num.pop(i+1)
             if len(self.Num) == 1:
                 break
         input[index] = self.Num.pop()
-        input[index-1] =  input.pop(index)
+        input[index-1] = input.pop(index)
     # Main
     def Main_Algorithm(self, input=[], index=0):
         input = self.Input
