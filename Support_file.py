@@ -1,5 +1,4 @@
 from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
-from Function.Operation_Condition import Main
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
@@ -33,14 +32,13 @@ class Operation:
         else:
             return label.Goto_statement(scan, lines, line)
     def Condition(self, scan, lines, line):
-        scan = scan.split(' ')
-        input = scan[1]
-        input = input.replace(':', '')
-        condition.Convert(input)
-        if condition.Main() is True:
-            print('True')
-        else: 
-            print('False')
+        scan = scan.split()
+        if len(scan)==1:    # 'Else:'
+            cons = True
+        else:    
+            cons = scan[1]
+            cons = input.replace(':', '')
+        result = condition.Main(scan[0], cons, self.variable, self.in_variable, lines, line)
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

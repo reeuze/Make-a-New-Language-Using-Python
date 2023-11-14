@@ -14,6 +14,7 @@ class Class_Condition:
             elif Input[i] == ')':
                 self.Calculation(Input, index)
                 return
+        return ''.join(self.input)
     # Sub Main
     def Calculation(self, Input=[], index=0):
         operator = []
@@ -34,32 +35,32 @@ class Class_Condition:
     def Compare(self, var1, var2, operator):
         # Compare Nummber
         if operator == '==':
-            if int(var1) == int(var2):
+            if float(var1) == float(var2):
                 return True
             else:
                 return False
         elif operator == '!=':
-            if int(var1) != int(var2):
+            if float(var1) != float(var2):
                 return True
             else:
                 return False
         elif operator == '>=':
-            if int(var1) >= int(var2):
+            if float(var1) >= float(var2):
                 return True
             else:
                 return False
         elif operator == '<=':
-            if int(var1) <= int(var2):
+            if float(var1) <= float(var2):
                 return True
             else:
                 return False
         elif operator == '>':
-            if int(var1) > int(var2):
+            if float(var1) > float(var2):
                 return True
             else:
                 return False
         elif operator == '<':
-            if int(var1) < int(var2):
+            if float(var1) < float(var2):
                 return True
             else:
                 return False

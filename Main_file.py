@@ -25,39 +25,38 @@ class Main:
             return 8
         else:                   # Syntax Error
             return
+    def Read_line(self, line=0, line_end=0):
+        while 0 <= line < line_end:
+            s = self.Check_line(self.lines[line])
+            # ============ #
+            if s == 1:
+                # print("detect inisialitation")
+                x.Inisialitation(self.lines[line])
+            elif s == 2:
+                # print("detect input")
+                x.Input(self.lines[line])
+            elif s == 3:
+                # print("detect output")
+                x.Output(self.lines[line])
+            elif s == 4:
+                # print("detect label")
+                set_line = x.Label(self.lines[line], self.lines, line)
+                if set_line != -1:
+                    line = set_line
+            elif s == 5:
+                # print("detect condition")
+                Decision = x.Condition(self.lines[line], self.lines, line)
+                if Decision[0] is True:
+                    self.Read_line(Decision[1], Decision[2])
+            # ============ #
+            # self.Print()
+            line += 1
     def Execution(self):
         with open(self.Name_file, 'r') as file:
             self.lines = file.readlines()
             for i in range(len(self.lines)):
                 self.lines[i] = self.lines[i].replace('\n', '')
-            print(self.lines)
-            line = 0
-            while 0 <= line < len(self.lines):
-                s = self.Check_line(self.lines[line])
-                # ============ #
-                if s == 1:
-                    # print("detect inisialitation")
-                    x.Inisialitation(self.lines[line])
-                elif s == 2:
-                    # print("detect input")
-                    x.Input(self.lines[line])
-                elif s == 3:
-                    # print("detect output")
-                    x.Output(self.lines[line])
-                elif s == 4:
-                    # print("detect label")
-                    set_line = x.Label(self.lines[line], self.lines, line)
-                    if set_line != -1:
-                        line = set_line
-                elif s == 5:
-                    # print("detect condition")
-                    set_line = x.Condition(self.lines[line], self.lines, line)
-                    if set_line != -1:
-                        line = set_line
-                # ============ #
-                # self.Print()
-                line += 1
-
+            self.Read_line(0, len(self.lines))
 a = Main()
 x = Operation()
 a.Execution()
