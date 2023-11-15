@@ -88,7 +88,7 @@ class Class_Condition:
                 return False
     # Helper
     def Convert(self, scan):
-        scan = '(' + scan + ')'
+        # scan = '(' + scan + ')'
         key_word = r'==|!=|>=|<=|<|>|in|not in|and|or|\w+|\d+|\(|\)'
         self.input = re.findall(key_word, scan)
     def Priority(self, operator):

@@ -1,3 +1,4 @@
+import re
 from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
 
 inisial = File_Inisialitation.Inisialitation()
@@ -31,14 +32,9 @@ class Operation:
             return -1
         else:
             return label.Goto_statement(scan, lines, line)
-    def Condition(self, scan, lines, line):
-        scan = scan.split()
-        if len(scan)==1:    # 'Else:'
-            cons = True
-        else:    
-            cons = scan[1]
-            cons = input.replace(':', '')
-        result = condition.Main(scan[0], cons, self.variable, self.in_variable, lines, line)
+    def Condition(self, lines, line, nested):
+        set_line = condition.Main(self.variable, self.in_variable, lines, line, nested)
+        return set_line
     # def Looping(self): 
     # def Stack(self): 
     # def Function(self): 

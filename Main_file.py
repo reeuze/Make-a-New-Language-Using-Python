@@ -13,10 +13,10 @@ class Main:
             return 2
         elif 'cetak' in scan:   # Output
             return 3
+        elif ('jika' in scan) or ('jika_tidak' in scan) or ('lainnya' in scan) and (':' in scan):  # Condition
+            return 5
         elif (':' in scan) or ('ke' in scan):   # Label
             return 4
-        elif (('jika' in scan) or ('jika tidak' in scan) or ('lainnya' in scan)) and (':' in scan):# Condition
-            return 5
         elif ('for' in scan):   # Looping
             return 6
         elif ('=' and '[' and ']') in scan:     # List
@@ -25,7 +25,7 @@ class Main:
             return 8
         else:                   # Syntax Error
             return
-    def Read_line(self, line=0, line_end=0):
+    def Read_line(self, line=0, line_end=0, nested=0):
         while 0 <= line < line_end:
             s = self.Check_line(self.lines[line])
             # ============ #
@@ -44,10 +44,12 @@ class Main:
                 if set_line != -1:
                     line = set_line
             elif s == 5:
-                # print("detect condition")
-                Decision = x.Condition(self.lines[line], self.lines, line)
-                if Decision[0] is True:
-                    self.Read_line(Decision[1], Decision[2])
+                print("detect condition")
+                set = x.Condition(self.lines, line, nested)
+                self.Read_line(set[0], set[1])
+            else:
+                line += 1
+                return
             # ============ #
             # self.Print()
             line += 1

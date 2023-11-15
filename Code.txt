@@ -11,11 +11,13 @@ cetak('nilai b: ',b)
 cetak('nilai test: ',test)
 cetak('nilai k: ',k)
 cetak('nilai c: ',c)
-masukkan('masukkan variabel :',c)
-cetak('nilai c yang baru : ',c)
 jika (a>b):
     cetak('benar baris 1')
     cetak('benar baris 2')
+jika_tidak (a<b):
+    cetak('benar lainnya baris 1')
+    cetak('benar lainnya baris 2')
 lainnya:
     cetak('salah baris 1')
     cetak('salah baris 2')
+cetak('setelah blok condition')
