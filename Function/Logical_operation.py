@@ -6,7 +6,7 @@ class Class_Condition:
         self.Convert(scan)
     def Main(self, Input=[], index=0):
         Input = self.input
-        for i in range(len(Input)):
+        for i in range(index, len(Input)):
             if len(Input) == 1:
                 break
             elif Input[i] == '(':
@@ -14,24 +14,26 @@ class Class_Condition:
             elif Input[i] == ')':
                 self.Calculation(Input, index)
                 return
-        return ''.join(self.input)
+        return str(self.input)
     # Sub Main
     def Calculation(self, Input=[], index=0):
         operator = []
         value = []
-        operator = r'==|!=|>=|<=|<|>|in|not in|and|or'
-        operator = re.findall(operator, ''.join(Input))
-        while input:
-            if input[index]==')':
+        key_word = r'==|!=|>=|<=|<|>|in|not in|and|or'
+        operan = re.findall(key_word, ''.join(Input))
+        while Input:
+            if Input[index]==')':
                 break
-            elif input[index] in operator:
-                operator.append(input.pop(index))
+            elif Input[index] in operan:
+                operator.append(Input.pop(index))
             else:
-                value.append(input.pop(index))
-        while len(input) != 1:
+                value.append(Input.pop(index))
+        while len(value) != 1:
             i = self.Priority(operator)
             result = self.Compare(value.pop(i), value.pop(i), operator.pop(i))
             value.insert(i, str(result))
+        Input[index] = value.pop()
+        Input[index-1] = Input.pop(index)
     def Compare(self, var1, var2, operator):
         # Compare Nummber
         if operator == '==':
@@ -91,6 +93,9 @@ class Class_Condition:
         # scan = '(' + scan + ')'
         key_word = r'==|!=|>=|<=|<|>|in|not in|and|or|\w+|\d+|\(|\)'
         self.input = re.findall(key_word, scan)
+        for i in range(len(self.input)):
+            if self.input[i] == 'True':
+                self.input[i] = True
     def Priority(self, operator):
         value = 0
         best = 0

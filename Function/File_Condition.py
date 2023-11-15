@@ -8,13 +8,10 @@ class Condition:
         line_stm = []
         tmp = []
         i = line
-        print(i)
         nest = 0
         blok = 0
         while i < len(lines):
-            print(lines[i])
             nest = self.Nested(lines[i])
-            print(nest)
             # Insert condition
             if ('jika' in lines[i]) and (blok == 0):
                 # set condition
@@ -26,8 +23,9 @@ class Condition:
                 tmp.append(i+1)
             elif ('jika_tidak' in lines[i]) and (nest == nested):
                 # add number last line
-                tmp.append(i)
+                tmp.append(i-1)
                 line_stm.append(tmp)
+                tmp = []
                 # set condition
                 con = lines[i].split()
                 con[1] = con[1].replace(':', '')
@@ -36,10 +34,11 @@ class Condition:
                 tmp.append(i+1)
             elif ('lainnya' in lines[i]) and (nest == nested):
                 # add number last line
-                tmp.append(i)
+                tmp.append(i-1)
                 line_stm.append(tmp)
+                tmp = []
                 # set value 'else'
-                cons.append(True)
+                cons.append('True')
                 tmp.append(i+1)
             # Masukkan blok statementnya
             elif nest > nested:
@@ -49,11 +48,11 @@ class Condition:
                 # add number last line
                 tmp.append(i-1)
                 line_stm.append(tmp)
+                tmp = []
                 # Break blok statement
                 break
-            # i += 1
-        line += i
-        print(cons, line_stm, line)
+            i += 1
+        line = i
         # Convert variable to value
         for k in range(len(cons)):
             cons[k] = re.findall(key_word, cons[k])
@@ -61,17 +60,24 @@ class Condition:
                 for j in range(len(var)):
                     if cons[k][i] == var[j]:
                         cons[k][i] = in_var[j]
+        # Insert Next line after blok statement
+        for i in range(len(line_stm)):
+            line_stm[i].append(line)
         # Cek value of cons
         for i in range(len(cons)):
-            operation = Class_Condition(cons[i])
-            if cons[i] is True:
+            if 'True' in cons[i]:
                 return line_stm[i]
-            elif operation.Main() is True:
-                return line_stm[i]
+            else:
+                operation = Class_Condition(str(cons[i]))
+                value = operation.Main()
+                if 'True' in value:
+                    return line_stm[i]
     # Helper
     def Nested(self, scan):
         scanned = re.split(r'(\s+)', scan)
-        if len(scanned[1]) < 4:
+        if len(scanned) == 1:
+            return 0
+        elif len(scanned[1]) < 4:
             return 0
         nest = len(scanned[1])/4
         return nest
