@@ -44,9 +44,8 @@ class Main:
                 if set_line != -1:
                     line = set_line
             elif s == 5:
-                print("detect condition")
+                # print("detect condition")
                 set = x.Condition(self.lines, line, nested)
-                print(set)
                 self.Read_line(set[0], set[1]+1)
                 line = set[2]
             else:

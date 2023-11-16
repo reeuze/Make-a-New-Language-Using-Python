@@ -18,7 +18,7 @@ class Condition:
                 con = lines[i].split()
                 con[1] = con[1].replace(':', '')
                 cons.append(con[1])
-                blok += 1
+                blok += 1   # avoid another if statement
                 # add number begin line
                 tmp.append(i+1)
             elif ('jika_tidak' in lines[i]) and (nest == nested):
@@ -37,10 +37,9 @@ class Condition:
                 tmp.append(i-1)
                 line_stm.append(tmp)
                 tmp = []
-                # set value 'else'
+                # set value 'else' and add number begin line
                 cons.append('True')
                 tmp.append(i+1)
-            # Masukkan blok statementnya
             elif nest > nested:
                 i += 1
                 continue
