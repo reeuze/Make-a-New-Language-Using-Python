@@ -62,13 +62,12 @@ class Condition:
         # Insert Next line after blok statement
         for i in range(len(line_stm)):
             line_stm[i].append(line)
-        print(cons)
         # Cek value of cons
         for i in range(len(cons)):
             if 'True' in cons[i]:
                 return line_stm[i]
             else:
-                operation = Class_Condition(str(cons[i]))
+                operation = Class_Condition(cons[i])
                 value = operation.Main()
                 if 'True' in value:
                     return line_stm[i]

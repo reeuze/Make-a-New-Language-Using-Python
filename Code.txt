@@ -4,7 +4,7 @@ b=2
 # Check arithmatic operation
 c=(a+b)*(4-b)
 a=((b+2)*3)-4
-b=b+2
+b=b+1
 # Check Label and Goto
 ke Label
 cetak('salah !')
@@ -24,3 +24,18 @@ lainnya:
     cetak('salah baris 1')
     cetak('salah baris 2')
 cetak('setelah blok condition')
+# Check looping using combo if and Label
+k=0
+n=5
+Ulang:
+jika (k<n):
+    cetak('perulangan ',k)
+    k=k+1
+    ke Ulang
+lainnya:
+    ke Berhenti
+Berhenti:
+
+
+# Stop
+cetak("Berhasil sampai akhir !")

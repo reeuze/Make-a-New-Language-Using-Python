@@ -48,9 +48,9 @@ class Main:
                 set = x.Condition(self.lines, line, nested)
                 self.Read_line(set[0], set[1]+1)
                 line = set[2]
-            else:
-                line += 1
-                return
+            # else:
+            #     line += 1
+            #     return
             # ============ #
             # self.Print()
             line += 1
