@@ -4,6 +4,7 @@ class Class_Condition:
     def __init__(self, scan):
         self.input = []
         self.Convert(scan)
+        self.input = scan
     def Main(self, Input=[], index=0):
         Input = self.input
         for i in range(index, len(Input)):
@@ -21,13 +22,16 @@ class Class_Condition:
         value = []
         key_word = r'==|!=|>=|<=|<|>|in|not in|and|or'
         operan = re.findall(key_word, ''.join(Input))
+        print(Input, index, Input[index])
         while Input:
+            print(Input[index])
             if Input[index]==')':
                 break
             elif Input[index] in operan:
                 operator.append(Input.pop(index))
             else:
                 value.append(Input.pop(index))
+        print(operator, value)
         while len(value) != 1:
             i = self.Priority(operator)
             result = self.Compare(value.pop(i), value.pop(i), operator.pop(i))
@@ -91,8 +95,8 @@ class Class_Condition:
     # Helper
     def Convert(self, scan):
         # scan = '(' + scan + ')'
-        key_word = r'==|!=|>=|<=|<|>|in|not in|and|or|\w+|\d+|\(|\)'
-        self.input = re.findall(key_word, scan)
+        # key_word = r'\b(==|!=|>=|<=|<|>|in|not in|and|or|\d+\.\d+|d+|\(|\)|\w+)\b'
+        # self.input = re.findall(key_word, scan)
         for i in range(len(self.input)):
             if self.input[i] == 'True':
                 self.input[i] = True

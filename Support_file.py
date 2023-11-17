@@ -13,11 +13,11 @@ class Operation:
     # ===== Main Function =====
     def Inisialitation(self, scan):
         split = scan.split('=')
-        if inisial.Refill(split[0], split[1], self.variable, self.in_variable) is True:
-            return
-        elif inisial.Input(split[0], split[1], self.variable, self.in_variable) is True:
+        if inisial.Input(split[0], split[1], self.variable, self.in_variable) is True:
             return
         elif inisial.Operation(split[0], split[1], self.variable, self.in_variable) is True:
+            return
+        elif inisial.Refill(split[0], split[1], self.variable, self.in_variable) is True:
             return
     def Input(self, scan):
         scan = input.Get_input(scan)

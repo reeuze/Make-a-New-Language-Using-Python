@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T05:28:24.100Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Hmp1n4CszqJqPlRF2qhk" version="22.1.2" type="device">
+<mxfile host="app.diagrams.net" modified="2023-11-16T07:29:30.468Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="KBixtF2PEtniaPpwXqRy" version="22.1.2" type="device">
   <diagram name="Halaman-1" id="1nc28jSzTPdm_pfPCFTR">
-    <mxGraphModel dx="2647" dy="1673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
+    <mxGraphModel dx="1588" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="3000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -85,13 +85,13 @@
           <mxGeometry x="125" y="1285" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-24" value="Looping" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="125" y="1950" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="2000" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-25" value="Array" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="125" y="2070" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="2120" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-26" value="Function" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="125" y="2208" width="80" height="80" as="geometry" />
+          <mxGeometry x="125" y="2258" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ZSAQHpN-eL0URogZfKka-84" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ZSAQHpN-eL0URogZfKka-27" target="ZSAQHpN-eL0URogZfKka-29" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -417,16 +417,16 @@
         <mxCell id="qdTnBpT35PdAlgAGy0Dm-66" value="add the line number after the statement block to the line_stm stack" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="235" y="1560" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qdTnBpT35PdAlgAGy0Dm-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qdTnBpT35PdAlgAGy0Dm-67" target="qdTnBpT35PdAlgAGy0Dm-68">
+        <mxCell id="qdTnBpT35PdAlgAGy0Dm-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qdTnBpT35PdAlgAGy0Dm-67" target="qdTnBpT35PdAlgAGy0Dm-77">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qdTnBpT35PdAlgAGy0Dm-67" value="Check the value of cons" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="235" y="1680" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qdTnBpT35PdAlgAGy0Dm-70" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qdTnBpT35PdAlgAGy0Dm-68" target="qdTnBpT35PdAlgAGy0Dm-67">
-          <mxGeometry x="-0.6819" relative="1" as="geometry">
+          <mxGeometry x="-0.8333" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="200" y="1840" />
+              <mxPoint x="200" y="1920" />
               <mxPoint x="200" y="1710" />
             </Array>
             <mxPoint as="offset" />
@@ -436,10 +436,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qdTnBpT35PdAlgAGy0Dm-68" value="If true?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="255" y="1800" width="80" height="80" as="geometry" />
+          <mxGeometry x="255" y="1880" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="qdTnBpT35PdAlgAGy0Dm-69" value="return elemen line_stm" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="1810" width="120" height="60" as="geometry" />
+          <mxGeometry x="400" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qdTnBpT35PdAlgAGy0Dm-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qdTnBpT35PdAlgAGy0Dm-77" target="qdTnBpT35PdAlgAGy0Dm-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qdTnBpT35PdAlgAGy0Dm-77" value="do logical&lt;br&gt;operations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="1780" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -1,16 +1,19 @@
+# Check Inisialitation
 a=1
 b=2
-test=teks
-k=0
+# Check arithmatic operation
+c=(a+b)*(4-b)
+a=((b+2)*3)-4
+b=b+2
+# Check Label and Goto
 ke Label
 cetak('salah !')
 Label:
-c=(a+b)*(4-b)
+# Check Print
 cetak('nilai a: ',a)
 cetak('nilai b: ',b)
-cetak('nilai test: ',test)
-cetak('nilai k: ',k)
 cetak('nilai c: ',c)
+# Check condition statement
 jika (a>b):
     cetak('benar baris 1')
     cetak('benar baris 2')
