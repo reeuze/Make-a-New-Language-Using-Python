@@ -1,0 +1,15 @@
+a=1
+b=2
+c=0
+c=(a+b)*(4-b)
+a=((b+2)*3)-4
+b=b+1
+cetak('nilai a: ',a)
+cetak('nilai b: ',b)
+cetak('nilai c: ',c)
+a=0
+b=1
+c=2
+cetak('nilai a: ',a)
+cetak('nilai b: ',b)
+cetak('nilai c: ',c)

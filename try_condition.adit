@@ -1,0 +1,14 @@
+cetak('mulai')
+a=1
+b=1
+jika (a>b):
+    cetak('baris jika 1')
+    cetak('baris jika 2')
+jika_tidak (a<b):
+    cetak('baris jika tidak 1')
+    cetak('baris jika tidak 2')
+lainnya:
+    cetak('baris lainnya 1')
+    cetak('baris lainnya 2')
+cetak('selesai')
+cetak('jinaebfkshb')

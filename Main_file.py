@@ -1,7 +1,7 @@
 from Support_file import Operation
 class Main:
-    def __init__(self):
-        self.Name_file = "Code.txt"
+    def __init__(self, file):
+        self.Name_file = file
         self.lines = []
     def Print(self):
         print("variabel : ", x.variable)
@@ -60,6 +60,8 @@ class Main:
             for i in range(len(self.lines)):
                 self.lines[i] = self.lines[i].replace('\n', '')
             self.Read_line(0, len(self.lines))
-a = Main()
+
+file = input('Execute : ')
+a = Main(file)
 x = Operation()
 a.Execution()

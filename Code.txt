@@ -15,27 +15,40 @@ cetak('nilai b: ',b)
 cetak('nilai c: ',c)
 # Check condition statement
 jika (a>b):
-    cetak('benar baris 1')
-    cetak('benar baris 2')
+    cetak('baris jika 1')
+    cetak('baris jika 2')
 jika_tidak (a<b):
-    cetak('benar lainnya baris 1')
-    cetak('benar lainnya baris 2')
+    cetak('baris jika tidak 1')
+    cetak('baris jika tidak 2')
 lainnya:
-    cetak('salah baris 1')
-    cetak('salah baris 2')
+    cetak('baris lainnya 1')
+    cetak('baris lainnya 2')
 cetak('setelah blok condition')
 # Check looping using combo if and Label
-k=0
+i=0
 n=5
 Ulang:
-jika (k<n):
-    cetak('perulangan ',k)
-    k=k+1
+jika (i<n):
+    cetak('perulangan ',i)
+    i=i+1
     ke Ulang
 lainnya:
     ke Berhenti
 Berhenti:
-
+a=0
+b=1
+c=2
+# Chcek Nested if
+jika (a<b):
+    cetak('benar 1')
+    jika (b>c):
+        cetak('salah 1')
+    jika tidak (b<c):
+        cetak('benar 2')
+    lainnya:
+        cetak('salah 2')
+lainnya:
+    cetak('salah 3')
 
 # Stop
 cetak("Berhasil sampai akhir !")

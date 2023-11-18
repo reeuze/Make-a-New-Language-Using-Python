@@ -1,0 +1,11 @@
+cetak('mulai')
+ke Label_1
+cetak('salah 1')
+Label_1:
+cetak('benar 1')
+ke Label_2
+cetak('salah 2')
+cetak('salah 3')
+Label_2:
+cetak('benar 2')
+cetak('selesai')

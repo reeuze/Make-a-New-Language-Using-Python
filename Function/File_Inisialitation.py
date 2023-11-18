@@ -13,8 +13,9 @@ class Inisialitation:
     def Input(self, var, in_var, variable=[], in_variable=[]):
         # print('input detect')
         if self.Is_Operator(in_var) is False:
-            variable.append(var)
-            in_variable.append(in_var)
+            if self.Refill(var, in_var, variable, in_variable) is False:
+                variable.append(var)
+                in_variable.append(in_var)
             return True
         else:
             return False
