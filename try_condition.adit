@@ -1,6 +1,6 @@
 cetak('mulai')
 a=1
-b=1
+b=2
 jika (a>b):
     cetak('baris jika 1')
     cetak('baris jika 2')
@@ -10,5 +10,15 @@ jika_tidak (a<b):
 lainnya:
     cetak('baris lainnya 1')
     cetak('baris lainnya 2')
+# Check nested if
+jika (a<b):
+    cetak('benar 1')
+    jika (a>b):
+        cetak('salah 1')
+    jika_tidak (a<b):
+        cetak('benar 2')
+    lainnya:
+        cetak('salah 2')
+lainnya:
+    cetak('salah 3')
 cetak('selesai')
-cetak('jinaebfkshb')

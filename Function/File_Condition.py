@@ -43,15 +43,21 @@ class Condition:
             elif nest > nested:
                 i += 1
                 continue
-            else:
-                # add number last line
-                tmp.append(i-1)
-                line_stm.append(tmp)
-                tmp = []
-                # Break blok statement
+            elif nest <= nested:
                 break
+            # else:
+            #     # add number last line
+            #     tmp.append(i-1)
+            #     line_stm.append(tmp)
+            #     tmp = []
+            #     # Break blok statement
+            #     break
             i += 1
-        line = i
+        # add number last line
+        tmp.append(i-1)
+        line_stm.append(tmp)
+        tmp = []
+        line = i - 1
         # Convert variable to value
         for k in range(len(cons)):
             cons[k] = re.findall(key_word, cons[k])
@@ -62,7 +68,6 @@ class Condition:
         # Insert Next line after blok statement
         for i in range(len(line_stm)):
             line_stm[i].append(line)
-        # print(cons, line_stm)
         # Cek value of cons
         for i in range(len(cons)):
             if 'True' in cons[i]:
