@@ -25,30 +25,38 @@ class Main:
             return 8
         else:                   # Syntax Error
             return
-    def Read_line(self, line=0, line_end=0, nested=0):
+    def Read_line(self, lines=[], line=0, line_end=0, nested=0):
         while 0 <= line < line_end:
-            s = self.Check_line(self.lines[line])
+            s = self.Check_line(lines[line])
             # ============ #
             if s == 1:
                 # print("detect inisialitation")
-                x.Inisialitation(self.lines[line])
+                x.Inisialitation(lines[line])
             elif s == 2:
                 # print("detect input")
-                x.Input(self.lines[line])
+                x.Input(lines[line])
             elif s == 3:
                 # print("detect output")
-                x.Output(self.lines[line])
+                x.Output(lines[line])
             elif s == 4:
                 # print("detect label")
-                set_line = x.Label(self.lines[line], self.lines, line)
+                set_line = x.Label(lines[line], lines, line)
                 if set_line != -1:
                     line = set_line
             elif s == 5:
                 # print("detect condition")
-                set = x.Condition(self.lines, line, nested)
-                self.Read_line(set[0], set[1]+1, nested+1)
+                set = [] # line, line_end, next_read_line
+                set = x.Condition(lines, line, nested)
+                self.Read_line(lines, set[0], set[1]+1, nested+1)
                 line = set[2]
                 # print(self.lines[line])
+            elif s == 6 :
+                # print("detect looping")
+                set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
+                while True:
+                    set_loop = x.Looping(lines[line], lines, line, nested)
+                    self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
+                    line = int(set_loop[2])
             # else:
             #     line += 1
             #     return
@@ -60,7 +68,7 @@ class Main:
             self.lines = file.readlines()
             for i in range(len(self.lines)):
                 self.lines[i] = self.lines[i].replace('\n', '')
-            self.Read_line(0, len(self.lines))
+            self.Read_line(self.lines, 0, len(self.lines))
 
 file = input('Execute : ')
 a = Main(file)

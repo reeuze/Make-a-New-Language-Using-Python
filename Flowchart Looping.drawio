@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" modified="2023-11-20T08:38:28.566Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="uZ9L98h78NJdsiiPCssw" version="22.1.3" type="device">
+  <diagram name="Halaman-1" id="7Y3_-WSdzgpbxjAwZyet">
+    <mxGraphModel dx="756" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-2" target="vzgu1JoFr_THV2B0-EqD-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-2" value="looping detected" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-18" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-4" target="vzgu1JoFr_THV2B0-EqD-5">
+          <mxGeometry x="-0.6667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-19" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-4" target="vzgu1JoFr_THV2B0-EqD-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-4" value="For loop" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-24" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-5" target="vzgu1JoFr_THV2B0-EqD-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-5" value="While loop" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-6" target="vzgu1JoFr_THV2B0-EqD-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-6" value="Looping&lt;br&gt;type" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-25" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-9" target="vzgu1JoFr_THV2B0-EqD-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-27" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-9" target="vzgu1JoFr_THV2B0-EqD-15">
+          <mxGeometry x="-0.75" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="180" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-9" value="Check&lt;br&gt;condition" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-10" target="vzgu1JoFr_THV2B0-EqD-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-10" value="Calculate how&lt;br&gt;many times the&lt;br&gt;looping occurs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-11" target="vzgu1JoFr_THV2B0-EqD-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-11" value="Insert looping statement blocks into the loop_lines stack as many times as looping occurs" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="35" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-12" value="Read the lines in the loop_lines stack until finished" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="280" />
+              <mxPoint x="700" y="340" />
+              <mxPoint x="480" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-13" value="Read the lines in the loop_lines stack until finished" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-21" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-14" target="vzgu1JoFr_THV2B0-EqD-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-22" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vzgu1JoFr_THV2B0-EqD-14" target="vzgu1JoFr_THV2B0-EqD-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-14" value="looping &amp;gt; 0" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="40" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vzgu1JoFr_THV2B0-EqD-15" value="Continue to the&lt;br&gt;line after the&lt;br&gt;looping block" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

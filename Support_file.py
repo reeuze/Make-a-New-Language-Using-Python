@@ -1,11 +1,12 @@
 import re
-from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition
+from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
 input = File_Input.Input()
 label = File_Label.Label()
 condition = File_Condition.Condition()
+looping = File_Looping.Looping()
 class Operation:
     def __init__(self):
         self.variable = []
@@ -35,7 +36,11 @@ class Operation:
     def Condition(self, lines, line, nested):
         set_line = condition.Main(self.variable, self.in_variable, lines, line, nested)
         return set_line
-    # def Looping(self): 
+    def Looping(self, scan, lines, line, nested):
+        if 'untuk' in scan:
+            looping.For(scan, lines, line, nested)
+        elif 'selama' in scan:
+            looping.While(scan, lines, line, nested)
     # def Stack(self): 
     # def Function(self): 
     def Syntax_error(self):
