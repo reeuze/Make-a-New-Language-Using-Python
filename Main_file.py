@@ -17,7 +17,7 @@ class Main:
             return 5
         elif (':' in scan) or ('ke' in scan):   # Label
             return 4
-        elif ('for' in scan):   # Looping
+        elif ('for' in scan) or ('while' in scan):   # Looping
             return 6
         elif ('=' and '[' and ']') in scan:     # List
             return 7
