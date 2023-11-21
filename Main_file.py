@@ -7,7 +7,11 @@ class Main:
         print("variabel : ", x.variable)
         print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
-        if '=' in scan:         # Inisialitation
+        if ('untuk' in scan) or ('selama' in scan) and (':' in scan):   # Looping
+            return 6
+        elif ('=' and '[' and ']') in scan:     # List
+            return 7
+        elif '=' in scan:         # Inisialitation
             return 1
         elif 'masukkan' in scan:   # Input
             return 2
@@ -17,10 +21,6 @@ class Main:
             return 5
         elif (':' in scan) or ('ke' in scan):   # Label
             return 4
-        elif ('for' in scan) or ('while' in scan):   # Looping
-            return 6
-        elif ('=' and '[' and ']') in scan:     # List
-            return 7
         elif 'def' in scan:     # Function
             return 8
         else:                   # Syntax Error
@@ -51,12 +51,14 @@ class Main:
                 line = set[2]
                 # print(self.lines[line])
             elif s == 6 :
-                # print("detect looping")
+                print("detect looping")
                 set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
                 while True:
                     set_loop = x.Looping(lines[line], lines, line, nested)
                     self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
                     line = int(set_loop[2])
+            elif s == 7:
+
             # else:
             #     line += 1
             #     return

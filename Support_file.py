@@ -1,5 +1,5 @@
 import re
-from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping
+from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping, File_List
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
@@ -7,6 +7,7 @@ input = File_Input.Input()
 label = File_Label.Label()
 condition = File_Condition.Condition()
 looping = File_Looping.Looping()
+list = File_List.List()
 class Operation:
     def __init__(self):
         self.variable = []

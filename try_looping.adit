@@ -1,12 +1,11 @@
 cetak('mulai')
-i=0
 n=5
-Ulang:
-jika (i<n):
-    cetak('perulangan ke-',i)
-    i=i+1
-    ke Ulang
-lainnya
-    ke Berhenti
-Berhenti:
-cetak("selesai")
+untuk (i=0;i<n;i=i+1):
+    cetak('Perulangan jenis for loop ke-',i)
+i=0
+n=10
+while (i<n):
+    cetak('Perulangan jenis while loop ke-',i)
+    if (i==5):
+        break
+cetak('selesai')
