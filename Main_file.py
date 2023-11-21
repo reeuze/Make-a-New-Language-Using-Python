@@ -58,7 +58,7 @@ class Main:
                     self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
                     line = int(set_loop[2])
             elif s == 7:
-
+                x.List()
             # else:
             #     line += 1
             #     return

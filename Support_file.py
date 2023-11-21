@@ -42,6 +42,8 @@ class Operation:
             looping.For(scan, lines, line, nested)
         elif 'selama' in scan:
             looping.While(scan, lines, line, nested)
+    def List(self):
+        print('A')
     # def Stack(self): 
     # def Function(self): 
     def Syntax_error(self):
