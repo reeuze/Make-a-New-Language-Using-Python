@@ -1,5 +1,5 @@
 import re
-from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping, File_List
+from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping, File_List, File_Function
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
@@ -8,6 +8,7 @@ label = File_Label.Label()
 condition = File_Condition.Condition()
 looping = File_Looping.Looping()
 list = File_List.List()
+func = File_Function.Function()
 class Operation:
     def __init__(self):
         self.variable = []
@@ -51,7 +52,12 @@ class Operation:
             return
         elif list.Input_list(scan[0], scan[1], self.variable, self.in_variable) is True:
             return
-    # def Function(self): 
+    def Function(self, scan, lines, line):
+        scan = scan.replace('fungsi ', '')
+        scan = scan.replace(')','')
+        scan = scan.split('(')
+        print(scan)
+        func.Set(scan[0], scan[1])
     def Syntax_error(self):
         print('syntax error!!')
     # ===== Helper =====

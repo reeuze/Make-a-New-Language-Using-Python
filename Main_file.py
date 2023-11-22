@@ -7,23 +7,23 @@ class Main:
         print("variabel : ", x.variable)
         print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
-        if ('untuk' in scan) or ('selama' in scan) and (':' in scan):   # Looping
+        if ('untuk' in scan) or ('selama' in scan) and (':' in scan): # Looping
             return 6
-        elif ('=' and '[' and ']') in scan:     # List
+        elif ('=' and '[' and ']') in scan: # List
             return 7
-        elif '=' in scan:         # Inisialitation
+        elif '=' in scan: # Inisialitation
             return 1
-        elif 'masukkan' in scan:   # Input
+        elif 'masukkan' in scan: # Input
             return 2
-        elif 'cetak' in scan:   # Output
+        elif 'cetak' in scan: # Output
             return 3
-        elif ('jika' in scan) or ('jika_tidak' in scan) or ('lainnya' in scan) and (':' in scan):  # Condition
+        elif ('jika' in scan) or ('jika_tidak' in scan) or ('lainnya' in scan) and (':' in scan): # Condition
             return 5
-        elif (':' in scan) or ('ke' in scan):   # Label
+        elif (':' in scan) or ('ke' in scan): # Label
             return 4
-        elif 'def' in scan:     # Function
+        elif ('fungsi' and '(' and ')') or ('(' and ')') in scan: # Function
             return 8
-        else:                   # Syntax Error
+        else: # Syntax Error
             return
     def Read_line(self, lines=[], line=0, line_end=0, nested=0):
         while 0 <= line < line_end:
@@ -60,6 +60,11 @@ class Main:
             elif s == 7:
                 # print("detect list")
                 x.List(lines[line])
+            elif s == 8:
+                # print("detect function")
+                set = x.Function(lines[line], lines, line)
+                if set is not None:
+                    self.Read_line(set, line, line+1, nested+1)
             # else:
             #     line += 1
             #     return
@@ -71,7 +76,7 @@ class Main:
             self.lines = file.readlines()
             for i in range(len(self.lines)):
                 self.lines[i] = self.lines[i].replace('\n', '')
-            self.Read_line(self.lines, 0, len(self.lines))
+            self.Read_line(self.lines, 0, len(self.lines), 0)
 
 file = input('Execute : ')
 a = Main(file)

@@ -1,0 +1,6 @@
+cetak('mulai')
+fungsi Coba-coba()
+{
+    cetak('fungsi 1')
+}
+cetak('selesai')
