@@ -10,10 +10,9 @@ looping = File_Looping.Looping()
 list = File_List.List()
 func = File_Function.Function()
 class Operation:
-    def __init__(self):
-        self.variable = []
-        self.in_variable = []
-        self.List_variable = []
+    def __init__(self, variable=[], in_variable=[]):
+        self.variable = variable
+        self.in_variable = in_variable
     # ===== Main Function =====
     def Inisialitation(self, scan):
         split = scan.split('=')
@@ -53,11 +52,23 @@ class Operation:
         elif list.Input_list(scan[0], scan[1], self.variable, self.in_variable) is True:
             return
     def Function(self, scan, lines, line):
-        scan = scan.replace('fungsi ', '')
-        scan = scan.replace(')','')
-        scan = scan.split('(')
-        print(scan)
-        func.Set(scan[0], scan[1])
+        if 'fungsi' in scan:
+            # Declare
+            scan = scan.replace('fungsi ', '')
+            scan = scan.replace(')','')
+            scan = scan.split('(')
+            return func.Declaration(scan[0], scan[1], lines, line)
+        elif '=' in scan:
+            # Call with return
+            scan = scan.split('=')
+            scan[1] = scan[1].replace(')','')
+            scan[1] = scan[1].split('(')
+        else:
+            # Call without return
+            scan = scan.replace(')','')
+            scan = scan.split('(')
+            set = func.Call(scan[0], scan[1], lines, line)
+            return set
     def Syntax_error(self):
         print('syntax error!!')
     # ===== Helper =====

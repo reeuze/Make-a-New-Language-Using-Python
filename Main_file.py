@@ -3,9 +3,9 @@ class Main:
     def __init__(self, file):
         self.Name_file = file
         self.lines = []
-    def Print(self):
-        print("variabel : ", x.variable)
-        print("value variabel : ", x.in_variable)
+    # def Print(self):
+    #     print("variabel : ", x.variable)
+    #     print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
         if ('untuk' in scan) or ('selama' in scan) and (':' in scan): # Looping
             return 6
@@ -21,32 +21,34 @@ class Main:
             return 5
         elif (':' in scan) or ('ke' in scan): # Label
             return 4
-        elif ('fungsi' and '(' and ')') or ('(' and ')') in scan: # Function
+        elif ('fungsi' in scan and '(' in scan and ')' in scan) or ('(' in scan and ')' in scan): # Function
             return 8
+        elif 'kembalikan_nilai' in scan: # return value of function
+            return 9
         else: # Syntax Error
-            return
-    def Read_line(self, lines=[], line=0, line_end=0, nested=0):
+            return 99
+    def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation()):
         while 0 <= line < line_end:
             s = self.Check_line(lines[line])
             # ============ #
             if s == 1:
                 # print("detect inisialitation")
-                x.Inisialitation(lines[line])
+                obj.Inisialitation(lines[line])
             elif s == 2:
                 # print("detect input")
-                x.Input(lines[line])
+                obj.Input(lines[line])
             elif s == 3:
                 # print("detect output")
-                x.Output(lines[line])
+                obj.Output(lines[line])
             elif s == 4:
                 # print("detect label")
-                set_line = x.Label(lines[line], lines, line)
+                set_line = obj.Label(lines[line], lines, line)
                 if set_line != -1:
                     line = set_line
             elif s == 5:
                 # print("detect condition")
                 set = [] # line, line_end, next_read_line
-                set = x.Condition(lines, line, nested)
+                set = obj.Condition(lines, line, nested)
                 self.Read_line(lines, set[0], set[1]+1, nested+1)
                 line = set[2]
                 # print(self.lines[line])
@@ -54,17 +56,20 @@ class Main:
                 # print("detect looping")
                 set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
                 while True:
-                    set_loop = x.Looping(lines[line], lines, line, nested)
+                    set_loop = obj.Looping(lines[line], lines, line, nested)
                     self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
                     line = int(set_loop[2])
             elif s == 7:
                 # print("detect list")
-                x.List(lines[line])
+                obj.List(lines[line])
             elif s == 8:
                 # print("detect function")
-                set = x.Function(lines[line], lines, line)
-                if set is not None:
-                    self.Read_line(set, line, line+1, nested+1)
+                set = obj.Function(lines[line], lines, line)
+                if type(set) is int:
+                    line = set
+                else:
+                    new_obj = Operation(set[1], set[2])
+                    self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj)
             # else:
             #     line += 1
             #     return
@@ -80,5 +85,4 @@ class Main:
 
 file = input('Execute : ')
 a = Main(file)
-x = Operation()
 a.Execution()

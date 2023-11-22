@@ -1,6 +1,8 @@
 cetak('mulai')
-fungsi Coba-coba()
+fungsi RandomNumberGenerator(a,b,X)
 {
-    cetak('fungsi 1')
+    X=((a*X)+b)+((a*X)+b)
+    cetak('Operasi nilai X : ',X)
 }
+RandomNumberGenerator(1,2,0)
 cetak('selesai')

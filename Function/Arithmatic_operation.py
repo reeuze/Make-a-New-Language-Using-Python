@@ -10,7 +10,7 @@ class Class_Operation:
             self.Input.append(char)
         self.Input.append(')')
     def Is_Operator(self, character):
-        operators = "+-*/^"
+        operators = "+-*/^%"
         if character in operators:
             return True
     # Calculation
@@ -25,6 +25,8 @@ class Class_Operation:
             return float(var1)/float(var2)
         elif operator=='^':
             return float(var1)**float(var2)
+        elif operator=='%':
+            return float(var1)%float(var2)
     def Calculation(self, input=[], index=0):
         self.Char = []
         self.Num = []
@@ -44,7 +46,7 @@ class Class_Operation:
                 if (operator=='+' or operator=='-') and best < 1:
                     n = 1
                     i = j
-                elif (operator=='*' or operator=='/') and best < 2:
+                elif (operator=='*' or operator=='/' or operator=='%') and best < 2:
                     n = 2
                     i = j
                 elif operator=='^' and best < 3:

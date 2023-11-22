@@ -1,0 +1,6 @@
+fungsi RNG(a,b,c):
+    c=((a*c)+b)%8
+    kembalikan_nilai c
+fungsi papan():
+    cetak('========')
+    cetak('')
