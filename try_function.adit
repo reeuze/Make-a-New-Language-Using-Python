@@ -1,8 +1,11 @@
 cetak('mulai')
 fungsi RandomNumberGenerator(a,b,X)
 {
-    X=((a*X)+b)+((a*X)+b)
+    X=((a*X)+b)%3
     cetak('Operasi nilai X : ',X)
 }
-RandomNumberGenerator(1,2,0)
+a=1
+b=2
+c=8
+RandomNumberGenerator(a,b,c)
 cetak('selesai')

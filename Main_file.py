@@ -74,7 +74,6 @@ class Main:
             #     line += 1
             #     return
             # ============ #
-            # self.Print()
             line += 1
     def Execution(self):
         with open(self.Name_file, 'r') as file:

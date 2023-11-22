@@ -25,9 +25,14 @@ class Function:
         # Jump to the next line
         line = i
         return line
-    def Call(self, name, parameter, lines, line):
+    def Call(self, name, parameter, lines, line, variable=[], in_variable=[]):
         set = []
         parameter = parameter.split(',')
+        for i in range(len(parameter)):
+            for j in range(len(variable)):
+                if parameter[i] == variable[j]:
+                    parameter[i] = in_variable[j]
+                    break
         for i in range(len(self.Func_name)):
             if self.Func_name[i] == name:
                 set.append(self.Func_lines[i])

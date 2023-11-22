@@ -67,7 +67,7 @@ class Operation:
             # Call without return
             scan = scan.replace(')','')
             scan = scan.split('(')
-            set = func.Call(scan[0], scan[1], lines, line)
+            set = func.Call(scan[0], scan[1], lines, line, self.variable, self.in_variable)
             return set
     def Syntax_error(self):
         print('syntax error!!')
