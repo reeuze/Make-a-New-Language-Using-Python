@@ -51,14 +51,15 @@ class Main:
                 line = set[2]
                 # print(self.lines[line])
             elif s == 6 :
-                print("detect looping")
+                # print("detect looping")
                 set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
                 while True:
                     set_loop = x.Looping(lines[line], lines, line, nested)
                     self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
                     line = int(set_loop[2])
             elif s == 7:
-                x.List()
+                # print("detect list")
+                x.List(lines[line])
             # else:
             #     line += 1
             #     return

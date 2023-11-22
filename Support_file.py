@@ -12,6 +12,7 @@ class Operation:
     def __init__(self):
         self.variable = []
         self.in_variable = []
+        self.List_variable = []
     # ===== Main Function =====
     def Inisialitation(self, scan):
         split = scan.split('=')
@@ -42,9 +43,14 @@ class Operation:
             looping.For(scan, lines, line, nested)
         elif 'selama' in scan:
             looping.While(scan, lines, line, nested)
-    def List(self):
-        print('A')
-    # def Stack(self): 
+    def List(self, scan):
+        scan = scan.split('=')
+        if list.Refill_elemen(scan[0], scan[1], self.variable, self.in_variable) is True:
+            return
+        elif list.Get_value(scan[0], scan[1], self.variable, self.in_variable) is True:
+            return
+        elif list.Input_list(scan[0], scan[1], self.variable, self.in_variable) is True:
+            return
     # def Function(self): 
     def Syntax_error(self):
         print('syntax error!!')

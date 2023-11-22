@@ -20,7 +20,7 @@ class Output:
     def Variable(self, string, var=[], in_var=[]):
         for i in range(len(var)):
             if string==var[i]:
-                self.output += in_var[i]
+                self.output += str(in_var[i])
                 break
     # Helper
     def Get_output(self, string):

@@ -1,0 +1,13 @@
+cetak('mulai')
+a=9
+b=10
+cetak(a,' ',b)
+list=[1,2,3,4,5]
+cetak(list)
+list[0]=0
+cetak(list)
+list[4]=a
+cetak(list)
+a=list[2]
+cetak(a)
+cetak('selesai')
