@@ -7,9 +7,9 @@ class Main:
     #     print("variabel : ", x.variable)
     #     print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
-        if ('untuk' in scan) or ('selama' in scan) and (':' in scan): # Looping
-            return 6
-        elif ('=' and '[' and ']') in scan: # List
+        # if ('untuk' in scan) or ('selama' in scan) and (':' in scan): # Looping
+        #     return 6
+        if ('=' and '[' and ']') in scan: # List
             return 7
         elif 'cetak' in scan: # Output
             return 3
@@ -21,66 +21,67 @@ class Main:
             return 5
         elif ('fungsi' in scan and '(' in scan and ')' in scan) or ('(' in scan and ')' in scan): # Function
             return 8
-        elif (':' in scan) or ('ke' in scan): # Label
-            return 4
         elif 'kembalikan_nilai' in scan: # return value of function
             return 9
+        elif (':' in scan) or ('ke' in scan): # Label
+            return 4
         else: # Syntax Error
             return 99
     def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation(), return_to=''):
         while 0 <= line < line_end:
-            print(lines[line])
+            # print(lines[line])
             s = self.Check_line(lines[line])
             # ============ #
             if s == 1:
-                print("detect inisialitation")
+                # print("detect inisialitation")
                 obj.Inisialitation(lines[line])
             elif s == 2:
-                print("detect input")
+                # print("detect input")
                 obj.Input(lines[line])
             elif s == 3:
-                print("detect output")
+                # print("detect output")
                 obj.Output(lines[line])
             elif s == 4:
-                print("detect label")
+                # print("detect label")
                 set_line = obj.Label(lines[line], lines, line)
                 if set_line != -1:
                     line = set_line
             elif s == 5:
-                print("detect condition")
+                # print("detect condition")
                 set = [] # line, line_end, next_read_line
                 set = obj.Condition(lines, line, nested)
                 self.Read_line(lines, set[0], set[1]+1, nested+1)
                 line = set[2]
-                # print(self.lines[line])
-            elif s == 6 :
-                print("detect looping")
-                set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
-                while True:
-                    set_loop = obj.Looping(lines[line], lines, line, nested)
-                    self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
-                    line = int(set_loop[2])
+                # # print(self.lines[line])
+            # elif s == 6 :
+            #     # print("detect looping")
+            #     set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
+            #     while True:
+            #         set_loop = obj.Looping(lines[line], lines, line, nested)
+            #         self.Read_line(set_loop[0], set_loop[1][0], set_loop[1][1]+1, nested+1)
+            #         line = int(set_loop[2])
             elif s == 7:
-                print("detect list")
+                # print("detect list")
                 obj.List(lines[line])
             elif s == 8:
-                print("detect function")
+                # print("detect function")
                 set = obj.Function(lines[line], lines, line)
                 if type(set) is int:
                     line = set
                 elif set[3] is not None:
+                    # print('detect func with return')
                     new_obj = Operation(set[1], set[2])
                     set = self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj, set[3])
                     obj.Return(set, 'Get')
                 else:
+                    # print('detect func without return')
                     new_obj = Operation(set[1], set[2])
                     self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj)
-            if s == 9:
+            elif s == 9:
                 # print('detect return')
                 set = []
                 set.append(return_to)
-                set.append(lines[line].replace('kembalikan_nilai '))
-                print(set)
+                set.append(lines[line].replace('kembalikan_nilai ',''))
                 obj.Return(set, 'Set')
                 return set
             # else:

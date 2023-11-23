@@ -15,7 +15,10 @@ lainnya:
 List=[1,2,3,4,5]
 b=List[4]
 cetak('nilai b terbaru : ',b)
-fungsi Hitung_nilai_c(a,b,c):
+fungsi Hitung_nilai_c(a,b,c)
+{
     c=a+b
-    cetak('nilai c terbaru : ',c)
-Hitung_nilai_c(a,b,c)
+    kembalikan_nilai c
+}
+c<-Hitung_nilai_c(a,b,c)
+cetak('nilai c terbaru : ',c)

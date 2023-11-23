@@ -1,12 +1,12 @@
 import re
-from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_Looping, File_List, File_Function
+from Function import File_Inisialitation, File_Output, File_Input, File_Label, File_Condition, File_List, File_Function
 
 inisial = File_Inisialitation.Inisialitation()
 output = File_Output.Output()
 input = File_Input.Input()
 label = File_Label.Label()
 condition = File_Condition.Condition()
-looping = File_Looping.Looping()
+# looping = File_Looping.Looping()
 list = File_List.List()
 func = File_Function.Function()
 class Operation:
@@ -38,11 +38,11 @@ class Operation:
     def Condition(self, lines, line, nested):
         set_line = condition.Main(self.variable, self.in_variable, lines, line, nested)
         return set_line
-    def Looping(self, scan, lines, line, nested):
-        if 'untuk' in scan:
-            looping.For(scan, lines, line, nested)
-        elif 'selama' in scan:
-            looping.While(scan, lines, line, nested)
+    # def Looping(self, scan, lines, line, nested):
+    #     if 'untuk' in scan:
+    #         looping.For(scan, lines, line, nested)
+    #     elif 'selama' in scan:
+    #         looping.While(scan, lines, line, nested)
     def List(self, scan):
         scan = scan.split('=')
         if list.Refill_elemen(scan[0], scan[1], self.variable, self.in_variable) is True:
@@ -58,21 +58,19 @@ class Operation:
             scan = scan.replace(')','')
             scan = scan.split('(')
             return func.Declaration(scan[0], scan[1], lines, line)
-        elif '=' in scan:
+        elif '<-' in scan:
             # Call with return
-            scan = scan.split('=')
+            scan = scan.split('<-')
             scan[1] = scan[1].replace(')','')
             scan[1] = scan[1].split('(')
-            print(scan)
-            set = func.Call(scan[1][0], scan[1][1], scan[0], self.variable, self.in_variable)
-            return set
+            return func.Call(scan[1][0], scan[1][1], scan[0], self.variable, self.in_variable)
         else:
             # Call without return
             scan = scan.replace(')','')
             scan = scan.split('(')
-            set = func.Call(scan[0], scan[1], None, self.variable, self.in_variable)
-            return set
+            return func.Call(scan[0], scan[1], None, self.variable, self.in_variable)
     def Return(self, set, mode):
+        set[1] = set[1].replace(' ','')
         if mode == 'Set':
             for i in range(len(self.variable)):
                 if self.variable[i] == set[1]:

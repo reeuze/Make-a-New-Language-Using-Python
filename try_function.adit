@@ -6,10 +6,10 @@ fungsi Hitung(a,b,c)
     b=b+2
     kembalikan_nilai c
 }
-a=1
+a=2
 b=2
 c=3
 cetak('Nilai a b c : ',a,' ',b,' ',c)
-c=Hitung(a,b,c)
+c<-Hitung(a,b,c)
 cetak('Nilai a b c : ',a,' ',b,' ',c)
 cetak('selesai')

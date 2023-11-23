@@ -4,8 +4,8 @@ untuk (i=0;i<n;i=i+1):
     cetak('Perulangan jenis for loop ke-',i)
 i=0
 n=10
-while (i<n):
+selama (i<n):
     cetak('Perulangan jenis while loop ke-',i)
-    if (i==5):
+    jika (i==5):
         break
 cetak('selesai')
