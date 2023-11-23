@@ -1,6 +1,25 @@
-fungsi RNG(a,b,c):
+cetak('mulai')
+P1=X
+P2=''
+P3=''
+P4=''
+P5=X
+P5=''
+P6=''
+P7=''
+P8=''
+P9=X
+fungsi RNG(a,b,c)
+{
     c=((a*c)+b)%8
     kembalikan_nilai c
-fungsi papan():
-    cetak('========')
-    cetak('')
+}
+fungsi Papan(a,b,c,d,e,f,g,h,i)
+{
+    cetak('|===========|')
+    cetak('| ',a,' | ',b,' | ',c,' |')
+    cetak('| ',d,' | ',e,' | ',f,' |')
+    cetak('| ',g,' | ',h,' | ',i,' |')
+    cetak('|===========|')
+}
+fungsi Papan(P1,P2,P3,P4,P5,P6,P7,P8,P9)

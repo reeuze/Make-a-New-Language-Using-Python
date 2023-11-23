@@ -1,3 +1,4 @@
+import re
 class Function:
     def __init__(self):
         self.Func_name = []
@@ -41,6 +42,7 @@ class Function:
                 set.append(return_to)
         return set
     def Return(self, set, variable, in_variable):
+        print(set)
         for i in range(len(variable)):
             if variable[i] == set[0]:
                 in_variable[i] = float(set[1])

@@ -2,8 +2,8 @@ cetak('mulai')
 fungsi Hitung(a,b,c)
 {
     c=a+b
-    a=a+1
-    b=b+2
+    d=a+1
+    e=b+2
     kembalikan_nilai c
 }
 a=2

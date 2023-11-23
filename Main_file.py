@@ -1,3 +1,4 @@
+import re
 from Support_file import Operation
 class Main:
     def __init__(self, file):
@@ -29,21 +30,25 @@ class Main:
             return 99
     def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation(), return_to=''):
         while 0 <= line < line_end:
-            # print(lines[line])
-            s = self.Check_line(lines[line])
+            # remove space in begining
+            if nested > 0:
+                scan = lines[line].lstrip()
+            else:
+                scan = lines[line]
+            s = self.Check_line(scan)
             # ============ #
             if s == 1:
                 # print("detect inisialitation")
-                obj.Inisialitation(lines[line])
+                obj.Inisialitation(scan)
             elif s == 2:
                 # print("detect input")
-                obj.Input(lines[line])
+                obj.Input(scan)
             elif s == 3:
                 # print("detect output")
-                obj.Output(lines[line])
+                obj.Output(scan)
             elif s == 4:
                 # print("detect label")
-                set_label = obj.Label(lines[line], lines, line)
+                set_label = obj.Label(scan, lines, line)
                 if set_label[0] != -1:
                     line = set_label[0]
                 nested = set_label[1]
@@ -63,17 +68,17 @@ class Main:
             #         line = int(set_loop[2])
             elif s == 7:
                 # print("detect list")
-                obj.List(lines[line])
+                obj.List(scan)
             elif s == 8:
                 # print("detect function")
-                set_function = obj.Function(lines[line], lines, line)
+                set_function = obj.Function(scan, lines, line)
                 if type(set_function) is int:
                     line = set_function
                 elif set_function[3] is not None:
                     # print('detect func with return')
                     new_obj = Operation(set_function[1], set_function[2])
-                    set_function = self.Read_line(set_function[0], 0, len(set_function[0]), nested+1, new_obj, set[3])
-                    obj.Return(set, 'Get')
+                    set_function = self.Read_line(set_function[0], 0, len(set_function[0]), nested+1, new_obj, set_function[3])
+                    obj.Return(set_function, 'Get')
                 else:
                     # print('detect func without return')
                     new_obj = Operation(set_function[1], set_function[2])
@@ -83,8 +88,8 @@ class Main:
                 set_return = []
                 set_return.append(return_to)
                 set_return.append(lines[line].replace('kembalikan_nilai ',''))
-                obj.Return(set, 'Set')
-                return set
+                obj.Return(set_return, 'Set')
+                return set_return
             # else:
             #     line += 1
             #     return

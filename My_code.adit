@@ -1,0 +1,52 @@
+fungsi Hitung(ax,ay,bx,by,cx,cy)
+{
+    Dab=0
+    Dac=0
+    Dbc=0
+    s=0
+    luas=0
+    cetak('Hitung Jarang antar titik !')
+    Dab=(((bx-ax)^2)+((by-ay)^2))^(1/2)
+    Dac=(((cx-ax)^2)+((cy-ay)^2))^(1/2)
+    Dbc=(((bx-cx)^2)+((by-cy)^2))^(1/2)
+    cetak('berhasil menghitung')
+    cetak('Hitung Konstanta s !')
+    cetak(Dab,' ',Dac,' ',Dbc)
+    s=(Dab+Dac+Dbc)/2
+    cetak('berhasil menghitung')
+    cetak('Hitung Luas segitiganya !')
+    luas=(s*(s-Dab)*(s-Dac)*(s-Dbc))^(1/2)
+    cetak('berhasil menghitung')
+    kembalikan_nilai luas
+}
+
+Awal:
+luas_segitiga=0
+cetak('=======================================')
+cetak('| Perhitungan Luas Segitiga Sembarang |')
+cetak('=======================================')
+cetak('Untuk menghitung, masukkan ketiga titik')
+cetak('segitiga dalam koordinat kartesius !')
+cetak(' ')
+masukkan('Masukkan koordinat sumbu-x pertama : ',ax)
+masukkan('Masukkan koordinat sumbu-y pertama : ',ay)
+masukkan('Masukkan koordinat sumbu-x kedua : ',bx)
+masukkan('Masukkan koordinat sumbu-y kedua : ',by)
+masukkan('Masukkan koordinat sumbu-x ketiga : ',cx)
+masukkan('Masukkan koordinat sumbu-y ketiga : ',cy)
+luas_segitiga<-Hitung(ax,ay,bx,by,cx,cy)
+cetak('Luas segitiga setelah dihitung : ',luas_segitiga)
+Milih:
+pilih=0
+cetak('Isi 1 untuk mengulang !')
+cetak('Isi 2 untuk keluar    !')
+masukkan('==: ',pilih)
+jika (pilih==1):
+    ke Awal
+jika_tidak (pilih==2):
+    ke Berhenti
+lainnya:
+    cetak('Pilihan salah')
+    ke Milih
+Berhenti:
+cetak('Terima kasih !')
