@@ -25,7 +25,7 @@ class Function:
         # Jump to the next line
         line = i
         return line
-    def Call(self, name, parameter, lines, line, variable=[], in_variable=[]):
+    def Call(self, name, parameter, return_to, variable=[], in_variable=[]):
         set = []
         parameter = parameter.split(',')
         for i in range(len(parameter)):
@@ -38,6 +38,16 @@ class Function:
                 set.append(self.Func_lines[i])
                 set.append(self.Local_variable[i])
                 set.append(parameter)
+                set.append(return_to)
+        if return_to.isdigit():
+            set.append(int(return_to))
+        else:
+            for i in range(len(variable)):
+                if variable[i] == return_to:
+                    return_to = in_variable[i]
+            set.append(return_to)
         return set
-    def Return(self):
-        print('A')
+    def Return(self, set, variable, in_variable):
+        for i in range(len(variable)):
+            if variable[i] == set[0]:
+                in_variable[i] = int(set[1])

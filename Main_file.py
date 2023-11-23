@@ -27,7 +27,7 @@ class Main:
             return 9
         else: # Syntax Error
             return 99
-    def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation()):
+    def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation(), return_to=''):
         while 0 <= line < line_end:
             s = self.Check_line(lines[line])
             # ============ #
@@ -67,9 +67,21 @@ class Main:
                 set = obj.Function(lines[line], lines, line)
                 if type(set) is int:
                     line = set
+                elif set[3] is not None:
+                    new_obj = Operation(set[1], set[2])
+                    set = self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj, set[3])
+                    obj.Return(set, 'Get')
                 else:
                     new_obj = Operation(set[1], set[2])
                     self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj)
+            if s == 9:
+                # print('detect return')
+                set = []
+                set.append(return_to)
+                set.append(lines[line].replace('kembalikan_nilai '))
+                print(set)
+                obj.Return(set, 'Set')
+                return set
             # else:
             #     line += 1
             #     return

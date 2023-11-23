@@ -63,12 +63,22 @@ class Operation:
             scan = scan.split('=')
             scan[1] = scan[1].replace(')','')
             scan[1] = scan[1].split('(')
+            print(scan)
+            set = func.Call(scan[1][0], scan[1][1], scan[0], self.variable, self.in_variable)
+            return set
         else:
             # Call without return
             scan = scan.replace(')','')
             scan = scan.split('(')
-            set = func.Call(scan[0], scan[1], lines, line, self.variable, self.in_variable)
+            set = func.Call(scan[0], scan[1], None, self.variable, self.in_variable)
             return set
+    def Return(self, set, mode):
+        if mode == 'Set':
+            for i in range(len(self.variable)):
+                if self.variable[i] == set[1]:
+                    set[1] = self.in_variable[i]
+        elif mode == 'Get':
+            func.Return(set, self.variable, self.in_variable)
     def Syntax_error(self):
         print('syntax error!!')
     # ===== Helper =====
