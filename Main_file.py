@@ -4,9 +4,6 @@ class Main:
     def __init__(self, file):
         self.Name_file = file
         self.lines = []
-    # def Print(self):
-    #     print("variabel : ", x.variable)
-    #     print("value variabel : ", x.in_variable)
     def Check_line(self, scan):
         # if ('untuk' in scan) or ('selama' in scan) and (':' in scan): # Looping
         #     return 6
@@ -26,8 +23,6 @@ class Main:
             return 9
         elif (':' in scan) or ('ke' in scan): # Label
             return 4
-        else: # Syntax Error
-            return 99
     def Read_line(self, lines=[], line=0, line_end=0, nested=0, obj=Operation(), return_to=''):
         while 0 <= line < line_end:
             # remove space in begining
@@ -58,7 +53,6 @@ class Main:
                 set_condition = obj.Condition(lines, line, nested)
                 self.Read_line(lines, set_condition[0], set_condition[1]+1, nested+1)
                 line = set_condition[2]
-                # # print(self.lines[line])
             # elif s == 6 :
             #     # print("detect looping")
             #     set_loop = [[],[]]   # [lines], [line, end_line], next_read_line
@@ -90,10 +84,6 @@ class Main:
                 set_return.append(lines[line].replace('kembalikan_nilai ',''))
                 obj.Return(set_return, 'Set')
                 return set_return
-            # else:
-            #     line += 1
-            #     return
-            # ============ #
             line += 1
     def Execution(self):
         with open(self.Name_file, 'r') as file:

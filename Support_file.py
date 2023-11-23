@@ -77,6 +77,4 @@ class Operation:
                     set[1] = self.in_variable[i]
         elif mode == 'Get':
             func.Return(set, self.variable, self.in_variable)
-    def Syntax_error(self):
-        print('syntax error!!')
     # ===== Helper =====
