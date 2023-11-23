@@ -1,0 +1,5 @@
+cetak('Percobaan 1 : berhasil')
+a=2
+cetak('Percobaan ',a,' : ','berhasil')
+b=berhasil
+cetak('Percobaan 3 : ',b)

@@ -39,13 +39,7 @@ class Function:
                 set.append(self.Local_variable[i])
                 set.append(parameter)
                 set.append(return_to)
-        if return_to.isdigit():
-            set.append(int(return_to))
-        else:
-            for i in range(len(variable)):
-                if variable[i] == return_to:
-                    return_to = in_variable[i]
-            set.append(return_to)
+                print(set)
         return set
     def Return(self, set, variable, in_variable):
         for i in range(len(variable)):

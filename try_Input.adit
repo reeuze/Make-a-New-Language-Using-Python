@@ -1,0 +1,2 @@
+masukkan('Masukkan Teks : ',teks)
+cetak('Teks yang dimasukkan : ',teks)

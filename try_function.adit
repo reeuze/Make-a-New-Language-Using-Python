@@ -1,11 +1,15 @@
 cetak('mulai')
-fungsi RandomNumberGenerator(a,b,X)
+fungsi Hitung(a,b,c)
 {
-    X=((a*X)+b)%3
-    cetak('Operasi nilai X : ',X)
+    c=a+b
+    a=a+1
+    b=b+2
+    kembalikan_nilai c
 }
 a=1
 b=2
-c=8
-RandomNumberGenerator(a,b,c)
+c=3
+cetak('Nilai a b c : ',a,' ',b,' ',c)
+c=Hitung(a,b,c)
+cetak('Nilai a b c : ',a,' ',b,' ',c)
 cetak('selesai')

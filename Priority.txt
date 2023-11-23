@@ -1,0 +1,21 @@
+a=1+2+3+4+5
+b=0
+c=0
+masukkan('Masukkan Teks :',teks)
+cetak('Ini Teks : ',teks,' ;dan Ini adalah variabel : ',a)
+ke Label
+cetak('Output ini di abaikan !')
+Label:
+jika (a>b):
+    cetak('nilai a lebih besar dari b')
+jika_tidak (b>a):
+    cetak('nilai b lebih besar dari a')
+lainnya:
+    cetak('nilai a sama besar dengan b')
+List=[1,2,3,4,5]
+b=List[4]
+cetak('nilai b terbaru : ',b)
+fungsi Hitung_nilai_c(a,b,c):
+    c=a+b
+    cetak('nilai c terbaru : ',c)
+Hitung_nilai_c(a,b,c)
