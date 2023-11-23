@@ -6,7 +6,7 @@ jika (i<n):
     cetak('perulangan ke-',i)
     i=i+1
     ke Ulang
-lainnya
+lainnya:
     ke Berhenti
 Berhenti:
 cetak("selesai")

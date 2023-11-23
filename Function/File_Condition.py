@@ -14,6 +14,7 @@ class Condition:
             nest = self.Nested(lines[i])
             # Insert condition
             if ('jika' in lines[i]) and (blok == 0):
+                # print('detect jika')
                 # set condition
                 con = lines[i].split()
                 con[1] = con[1].replace(':', '')
@@ -22,6 +23,7 @@ class Condition:
                 # add number begin line
                 tmp.append(i+1)
             elif ('jika_tidak' in lines[i]) and (nest == nested):
+                # print('detect jika_tidak')
                 # add number last line
                 tmp.append(i-1)
                 line_stm.append(tmp)
@@ -33,6 +35,7 @@ class Condition:
                 # add number begin line
                 tmp.append(i+1)
             elif ('lainnya' in lines[i]) and (nest == nested):
+                # print('detect lainnya')
                 # add number last line
                 tmp.append(i-1)
                 line_stm.append(tmp)
@@ -68,6 +71,7 @@ class Condition:
         # Insert Next line after blok statement
         for i in range(len(line_stm)):
             line_stm[i].append(line)
+        # print(cons, line_stm)
         # Cek value of cons
         for i in range(len(cons)):
             if 'True' in cons[i]:

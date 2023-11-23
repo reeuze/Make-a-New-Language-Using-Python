@@ -25,14 +25,14 @@ class Operation:
     def Input(self, scan):
         scan = input.Get_input(scan)
         scan = scan.split(',')
-        # output.Main(scan[0], self.variable, self.in_variable)
         input.Main(scan, self.variable, self.in_variable)
     def Output(self, scan):
         scan = output.Get_output(scan)
         output.Main(scan, self.variable, self.in_variable)
     def Label(self, scan, lines, line):
-        if label.Label_name(scan, line) is True:
-            return -1
+        value = label.Label_name(scan, line)
+        if value[0] is True:
+            return [-1, value[1]]
         else:
             return label.Goto_statement(scan, lines, line)
     def Condition(self, lines, line, nested):

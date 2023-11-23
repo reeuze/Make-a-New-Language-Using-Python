@@ -1,4 +1,3 @@
-import re
 class Class_Operation:
     def __init__(self, operation):
         self.Input = []

@@ -43,15 +43,16 @@ class Main:
                 obj.Output(lines[line])
             elif s == 4:
                 # print("detect label")
-                set_line = obj.Label(lines[line], lines, line)
-                if set_line != -1:
-                    line = set_line
+                set_label = obj.Label(lines[line], lines, line)
+                if set_label[0] != -1:
+                    line = set_label[0]
+                nested = set_label[1]
             elif s == 5:
                 # print("detect condition")
-                set = [] # line, line_end, next_read_line
-                set = obj.Condition(lines, line, nested)
-                self.Read_line(lines, set[0], set[1]+1, nested+1)
-                line = set[2]
+                set_condition = [] # line, line_end, next_read_line
+                set_condition = obj.Condition(lines, line, nested)
+                self.Read_line(lines, set_condition[0], set_condition[1]+1, nested+1)
+                line = set_condition[2]
                 # # print(self.lines[line])
             # elif s == 6 :
             #     # print("detect looping")
@@ -65,23 +66,23 @@ class Main:
                 obj.List(lines[line])
             elif s == 8:
                 # print("detect function")
-                set = obj.Function(lines[line], lines, line)
-                if type(set) is int:
-                    line = set
-                elif set[3] is not None:
+                set_function = obj.Function(lines[line], lines, line)
+                if type(set_function) is int:
+                    line = set_function
+                elif set_function[3] is not None:
                     # print('detect func with return')
-                    new_obj = Operation(set[1], set[2])
-                    set = self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj, set[3])
+                    new_obj = Operation(set_function[1], set_function[2])
+                    set_function = self.Read_line(set_function[0], 0, len(set_function[0]), nested+1, new_obj, set[3])
                     obj.Return(set, 'Get')
                 else:
                     # print('detect func without return')
-                    new_obj = Operation(set[1], set[2])
-                    self.Read_line(set[0], 0, len(set[0]), nested+1, new_obj)
+                    new_obj = Operation(set_function[1], set_function[2])
+                    self.Read_line(set_function[0], 0, len(set_function[0]), nested+1, new_obj)
             elif s == 9:
                 # print('detect return')
-                set = []
-                set.append(return_to)
-                set.append(lines[line].replace('kembalikan_nilai ',''))
+                set_return = []
+                set_return.append(return_to)
+                set_return.append(lines[line].replace('kembalikan_nilai ',''))
                 obj.Return(set, 'Set')
                 return set
             # else:
