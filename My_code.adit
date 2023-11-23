@@ -4,19 +4,11 @@ fungsi Hitung(ax,ay,bx,by,cx,cy)
     Dac=0
     Dbc=0
     s=0
-    luas=0
-    cetak('Hitung Jarang antar titik !')
     Dab=(((bx-ax)^2)+((by-ay)^2))^(1/2)
     Dac=(((cx-ax)^2)+((cy-ay)^2))^(1/2)
     Dbc=(((bx-cx)^2)+((by-cy)^2))^(1/2)
-    cetak('berhasil menghitung')
-    cetak('Hitung Konstanta s !')
-    cetak(Dab,' ',Dac,' ',Dbc)
     s=(Dab+Dac+Dbc)/2
-    cetak('berhasil menghitung')
-    cetak('Hitung Luas segitiganya !')
     luas=(s*(s-Dab)*(s-Dac)*(s-Dbc))^(1/2)
-    cetak('berhasil menghitung')
     kembalikan_nilai luas
 }
 
@@ -46,7 +38,8 @@ jika (pilih==1):
 jika_tidak (pilih==2):
     ke Berhenti
 lainnya:
-    cetak('Pilihan salah')
+    cetak('Pilihan salah !')
+    cetak('Silahkan pilih lagi !')
     ke Milih
 Berhenti:
 cetak('Terima kasih !')

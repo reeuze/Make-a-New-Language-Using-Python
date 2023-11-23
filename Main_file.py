@@ -16,10 +16,10 @@ class Main:
             return 3
         elif 'masukkan' in scan: # Input
             return 2
-        elif '=' in scan: # Inisialitation
-            return 1
         elif ('jika' in scan) or ('jika_tidak' in scan) or ('lainnya' in scan) and (':' in scan): # Condition
             return 5
+        elif '=' in scan: # Inisialitation
+            return 1
         elif ('fungsi' in scan and '(' in scan and ')' in scan) or ('(' in scan and ')' in scan): # Function
             return 8
         elif 'kembalikan_nilai' in scan: # return value of function
